@@ -1,0 +1,8 @@
+import type { Metadata } from 'next';
+import { DM_Sans, Playfair_Display } from 'next/font/google';
+import './globals.css';
+const sans = DM_Sans({ variable: '--font-sans', subsets: ['latin'] });
+const display = Playfair_Display({ variable: '--font-display', subsets: ['latin'] });
+export const metadata: Metadata = { metadataBase: new URL('https://shree-win-game.net'), title: { default: 'Shree Win Game | Games, Guides & Categories', template: '%s | Shree Win Game' }, description: 'Explore Shree Win Game categories including Lottery, Mini Games, Casino, TRX WinGo and MotoRace in a fast, mobile-friendly guide.', keywords: ['Shree Win Game','Shree Win','WinGo','MotoRace','gaming guide'], alternates: { canonical: '/' }, openGraph: { title: 'Shree Win Game', description: 'Explore game categories, highlights and clear guides.', url: '/', siteName: 'Shree Win Game', type: 'website', images: [{ url: '/og.png', width: 1536, height: 1024, alt: 'Shree Win Game — Play your way. Own the moment.' }] }, twitter: { card: 'summary_large_image', title: 'Shree Win Game', description: 'Explore game categories, highlights and clear guides.', images: ['/og.png'] }, robots: { index: true, follow: true } };
+const schema = { '@context':'https://schema.org','@type':'WebSite',name:'Shree Win Game',url:'https://shree-win-game.net/',description:'A mobile-friendly guide to Shree Win Game categories and game formats.',inLanguage:'en' };
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body className={`${sans.variable} ${display.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />{children}</body></html>; }
