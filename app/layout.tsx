@@ -1,16 +1,57 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
+
 const sans = DM_Sans({ variable: '--font-sans', subsets: ['latin'] });
 const display = Playfair_Display({ variable: '--font-display', subsets: ['latin'] });
-export const metadata: Metadata = { metadataBase: new URL('https://shree-win-game.net'), title: { default: 'Shree Win Game | Login, Register, App & Game Guides', template: '%s | Shree Win Game' }, description: 'Explore the Shree Win Game login and register journey, app safety guide, WinGo, K3, 5D, TRX WinGo, MotoRace, lottery and casino categories.', keywords: ['Shree Win Game','Shree Win login','Shree Win register','Shree Win app','Shree Win APK','WinGo','MotoRace','gaming guide'], alternates: { canonical: '/' }, openGraph: { title: 'Shree Win Game | Complete Information Hub', description: 'Explore login, register, app safety, game categories and responsible-play guides.', url: '/', siteName: 'Shree Win Game', type: 'website', images: [{ url: '/og.png', width: 1536, height: 1024, alt: 'Shree Win Game — Play your way. Own the moment.' }] }, twitter: { card: 'summary_large_image', title: 'Shree Win Game | Complete Information Hub', description: 'Explore login, register, app safety, game categories and responsible-play guides.', images: ['/og.png'] }, robots: { index: true, follow: true } };
-const schema = { '@context':'https://schema.org','@graph':[
-  { '@type':'WebSite',name:'Shree Win Game',url:'https://shree-win-game.net/',description:'A mobile-friendly information hub for Shree Win Game account journeys, categories and safety guides.',inLanguage:'en' },
-  { '@type':'FAQPage',mainEntity:[
-    { '@type':'Question',name:'What is Shree Win Game?',acceptedAnswer:{ '@type':'Answer',text:'Shree Win Game is the working brand concept for this gaming information hub. Live operator facts and access links require verification.' } },
-    { '@type':'Question',name:'How can I register or log in?',acceptedAnswer:{ '@type':'Answer',text:'The page explains a typical safety-first account journey. Confirmed operator URLs and terms must be supplied before the actions are enabled.' } },
-    { '@type':'Question',name:'Where can I download the Shree Win app?',acceptedAnswer:{ '@type':'Answer',text:'No APK or app-store link is published until the source, publisher, permissions, checksum and current version are verified.' } },
-    { '@type':'Question',name:'Are bonuses or withdrawals guaranteed?',acceptedAnswer:{ '@type':'Answer',text:'No. This site does not promise bonuses, payouts, withdrawal times, win rates or earnings.' } }
-  ]}
-] };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body className={`${sans.variable} ${display.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />{children}</body></html>; }
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://shree-win-game.net'),
+  title: { default: 'Shree Win Game | Login, Register & Play Online', template: '%s' },
+  description: 'Explore Shree Win Game online—WinGo, K3, 5D, JILI, mini games, casino, Activity and Promotion. Login, register or download the Android app.',
+  keywords: ['Shree Win Game','Shree Win login','Shree Win register','Shree Win app download','Shree Win APK','Shree Win WinGo','Shree Win games'],
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Shree Win Game | One Vibrant Game Experience',
+    description: 'Explore Shree Win games, account access, Activity, Promotion, Wallet and the Android app in one modern experience.',
+    url: '/', siteName: 'Shree Win Game', type: 'website', locale: 'en_IN',
+    images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Shree Win Game — every game, one vibrant experience' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shree Win Game | One Vibrant Game Experience',
+    description: 'Explore games, Login, Register, Activity, Promotion, Wallet and the Shree Win Android app.',
+    images: ['/og.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
+};
+
+const schema = {
+  '@context':'https://schema.org',
+  '@graph':[
+    {
+      '@type':'WebSite', '@id':'https://shree-win-game.net/#website',
+      name:'Shree Win Game', url:'https://shree-win-game.net/',
+      description:'Shree Win Game brings game discovery, account access, Activity, Promotion, Wallet and Android app information into one mobile-first website.',
+      inLanguage:'en-IN', publisher:{ '@id':'https://shree-win-game.net/#brand' },
+    },
+    {
+      '@type':'Brand', '@id':'https://shree-win-game.net/#brand',
+      name:'Shree Win', url:'https://shree-win-game.net/', logo:'https://shree-win-game.net/shreewin-logo.png',
+    },
+    {
+      '@type':'FAQPage', '@id':'https://shree-win-game.net/#faq',
+      mainEntity:[
+        { '@type':'Question',name:'What is Shree Win Game?',acceptedAnswer:{ '@type':'Answer',text:'Shree Win Game is an online gaming platform that organises lottery, popular, mini-game and casino-style categories inside one mobile-first lobby.' } },
+        { '@type':'Question',name:'How do I create a Shree Win account?',acceptedAnswer:{ '@type':'Answer',text:'Open Register, enter your active mobile number, complete OTP verification, create a strong password and accept the applicable account terms.' } },
+        { '@type':'Question',name:'How do I log in?',acceptedAnswer:{ '@type':'Answer',text:'Open Shree Win Login and enter the mobile number or email and password connected to your account. Keep your password and OTP private.' } },
+        { '@type':'Question',name:'Which games can I find on Shree Win?',acceptedAnswer:{ '@type':'Answer',text:'The lobby includes recommended games, lottery formats, mini games and casino-style categories. The current selection is displayed inside the live lobby.' } },
+        { '@type':'Question',name:'How can I download the Android app?',acceptedAnswer:{ '@type':'Answer',text:'Visit Download App, review the current version and permissions, then follow the Android installation steps.' } },
+      ],
+    },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en-IN"><body className={`${sans.variable} ${display.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />{children}</body></html>;
+}

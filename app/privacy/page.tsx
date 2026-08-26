@@ -1,0 +1,16 @@
+import type { Metadata } from 'next';
+import { PageShell } from '../components/SiteChrome';
+import { InfoHero, ProductNotice } from '../components/InfoBlocks';
+export const metadata:Metadata={title:'Privacy Notice | Shree Win Game',description:'Read how the Shree Win Game website may handle account, device, transaction, support and usage information, plus security and privacy choices.',alternates:{canonical:'/privacy'}};
+export default function PrivacyPage(){return <PageShell><main><InfoHero eyebrow="PRIVACY NOTICE" title="Your information deserves" accent="clear and careful handling." copy="This notice describes the information a connected Shree Win product may need and the controls that should apply before personal data is collected." current="Privacy" icon="◉" primary={{label:'Read privacy notice',href:'#details'}}/>
+ <article className="legal-content" id="details"><p className="legal-updated">Last updated: 27 August 2026</p><ProductNotice>The current website build has no verified authentication, payment or analytics service connected. This notice must be matched to the actual operator and vendors before launch.</ProductNotice>
+ <h2>1. Information you provide</h2><p>A connected service may collect registration details, verification information, wallet and payment references, support messages and promotion information you choose to submit.</p>
+ <h2>2. Information generated through use</h2><p>The product may create account, game, result, transaction, device, security, log and activity records needed to operate, protect and support the service.</p>
+ <h2>3. Why information is used</h2><p>Information may be used to create and secure accounts, provide requested features, process authorised transactions, maintain records, prevent abuse, respond to support and comply with applicable obligations.</p>
+ <h2>4. Cookies and local storage</h2><p>Essential storage may be used for session, security and preference functions. Analytics or advertising tools must be disclosed and configured only when the actual services are known.</p>
+ <h2>5. Sharing</h2><p>Data should be shared only with service providers, payment partners, game providers, professional advisers or authorities when necessary, authorised and permitted by law. Vendor names should be listed when confirmed.</p>
+ <h2>6. Retention</h2><p>Personal information should be kept only for as long as needed for the stated purpose, account records, security, dispute handling and applicable legal obligations.</p>
+ <h2>7. Security</h2><p>Appropriate access controls, encryption, monitoring and incident procedures should protect data. Users must also keep passwords, OTPs and device access private.</p>
+ <h2>8. Your choices and rights</h2><p>Depending on applicable law, you may be able to access, correct or request deletion of information, object to certain uses or withdraw consent. Verified request channels must be provided by the operator.</p>
+ <h2>9. Children</h2><p>The service is not intended for minors and must not knowingly collect their information for account or gaming access.</p>
+ <h2>10. Contact</h2><p>A verified privacy contact and responsible legal entity must be inserted before personal information is collected through this website.</p></article></main></PageShell>}
