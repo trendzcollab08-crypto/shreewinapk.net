@@ -12,9 +12,9 @@ export function Hero() {
   return <section className="hero">
     <div className="hero-grid container">
       <div className="hero-copy">
-        <p className="eyebrow"><span/> Simple guides for Indian users</p>
+        <p className="eyebrow"><span/> Shree Win Game Information</p>
         <h1>ShreeWin Game – Login, Register, APK, Games &amp; Withdrawal Guide</h1>
-        <p className="hero-lead">Learn how ShreeWin Game works before you open it. We explain the ShreeWin login and registration steps, Android APK download, WinGo, K3, 5D, Aviator, deposits, bank and UPI withdrawals, gift codes, bonuses, referral and agent work in simple English.</p>
+        <p className="hero-lead">Shree Win offers instant customer support, APK access, phone and email registration, login and password reset, Lobby, Lottery, Popular, Mini Game and Casino navigation, Gift Codes as rewards, TRX WinGo, MotoRace, current promotion rules, withdrawal methods and a six-level agency system.</p>
         <div className="hero-actions"><CTAButton kind="register">Register <span>↗</span></CTAButton><CTAButton kind="login">Login <span>↗</span></CTAButton><a className="button button-text" href="#shree-win-apk">Explore Shree Win APK <span>↓</span></a></div>
         <ul className="hero-trust"><li><b>Step-by-step help</b><span>Short and clear instructions</span></li><li><b>Indian payment guide</b><span>UPI, bank and USDT information</span></li><li><b>Safe account access</b><span>We never collect your login details</span></li></ul>
       </div>
