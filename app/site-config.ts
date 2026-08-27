@@ -1,5 +1,5 @@
 export const siteConfig = {
-  brand: 'Shree Win',
+  brand: 'ShreeWin',
   siteName: 'ShreeWinAPK.net',
   domain: 'https://shreewinapk.net',
   loginUrl: 'https://shreewin1.com',
@@ -9,7 +9,7 @@ export const siteConfig = {
   apkVersion: null as string | null,
   apkSize: null as string | null,
   lastUpdated: '2026-08-27',
-  games: ['TRX WinGo', 'MotoRace'],
+  games: ['WinGo', 'K3', '5D', 'Aviator', 'TRX WinGo', 'MotoRace'],
   categories: ['Lobby', 'Lottery', 'Popular', 'Mini Game', 'Casino'],
   withdrawals: {
     upiMinimumInr: 100,
@@ -34,7 +34,7 @@ export const siteConfig = {
   ],
   navigation: [
     { label: 'Home', href: '/' },
-    { label: 'Shree Win APK', href: '/shree-win-apk' },
+    { label: 'ShreeWin APK', href: '/shree-win-apk' },
     { label: 'Download', href: '/shree-win-download' },
     { label: 'Games', href: '/shree-win-games' },
     { label: 'Withdraw', href: '/shree-win-withdrawal' },

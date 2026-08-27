@@ -8,7 +8,7 @@ export function Header() {
   return <header className="site-header">
     <div className="header-inner">
       <Link className="brand-logo" href="/" aria-label="ShreeWinAPK.net home">
-        <Image src={siteConfig.logo} width="270" height="90" alt="Shree Win" priority sizes="158px" />
+        <Image src={siteConfig.logo} width="270" height="90" alt="ShreeWin" priority sizes="158px" />
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {siteConfig.navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
@@ -32,17 +32,17 @@ export function Footer() {
   return <footer className="site-footer">
     <div className="container footer-grid">
       <div className="footer-brand">
-        <Image src={siteConfig.logo} width="270" height="90" alt="Shree Win" sizes="190px" />
-        <p>Independent, practical information about Shree Win APK, games, account access, promotions, withdrawals and agent work.</p>
+        <Image src={siteConfig.logo} width="270" height="90" alt="ShreeWin" sizes="190px" />
+        <p>Simple independent guides for ShreeWin APK, games, login, deposits, withdrawals, gift codes and agent work.</p>
         <div className="trust-chips"><span>Complete Information</span><span>Safety Guidance</span></div>
       </div>
-      <nav aria-label="Footer guides"><h2>Guides</h2><a href="/shree-win-apk">Shree Win APK</a><a href="/shree-win-download">Download Guide</a><a href="/shree-win-games">Games</a><a href="/trx-wingo">TRX WinGo</a><a href="/motorace">MotoRace</a><a href="/blog">Blog</a></nav>
+      <nav aria-label="Footer guides"><h2>Guides</h2><a href="/shree-win-apk">ShreeWin APK</a><a href="/shree-win-download">Download Guide</a><a href="/shree-win-games">Games</a><a href="/trx-wingo">TRX WinGo</a><a href="/motorace">MotoRace</a><a href="/blog">Blog</a></nav>
       <nav aria-label="Footer account information"><h2>Account &amp; Money</h2><a href="/shree-win-login">Login Guide</a><a href="/shree-win-register">Register Guide</a><a href="/shree-win-promotion">Promotion Guide</a><a href="/shree-win-withdrawal">Withdrawal Guide</a><a href="/shree-win-agent">Agent Work</a><a href={siteConfig.loginUrl} {...externalProps}>Login ↗</a><a href={siteConfig.registerUrl} {...externalProps}>Register ↗</a></nav>
       <nav aria-label="Footer policies"><h2>Information</h2><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/responsible-gaming">Responsible Gaming</a></nav>
     </div>
     <div className="container footer-disclaimer">
       <strong>Independent-site disclaimer</strong>
-      <p>ShreeWinAPK.net is an independent informational website. We provide informational guides related to Shree Win and do not claim ownership of the Shree Win platform. Game availability, features, promotions and platform information may change. Users should verify current information directly before taking action.</p>
+      <p>ShreeWinAPK.net is an independent information website. We provide guides related to ShreeWin and do not claim ownership of the platform. Game availability, payment methods, limits, processing times, bonuses and rules may change. Check the current information inside the platform before you take action.</p>
     </div>
     <div className="container footer-bottom"><span>© 2026 ShreeWinAPK.net. All rights reserved.</span><span>Gaming may involve financial risk. Outcomes are not guaranteed.</span></div>
   </footer>;

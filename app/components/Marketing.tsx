@@ -12,16 +12,16 @@ export function Hero() {
   return <section className="hero">
     <div className="hero-grid container">
       <div className="hero-copy">
-        <p className="eyebrow"><span/> Independent Shree Win information</p>
-        <h1>Shree Win APK – Download, Games, Login &amp; Complete Guide</h1>
-        <p className="hero-lead">Get the complete Shree Win picture before you continue: Android APK access, phone and email registration, login and password reset, Lobby, Lottery, Popular, Mini Game and Casino navigation, TRX WinGo, MotoRace, current promotion rules, withdrawal methods and the six-level agency system.</p>
+        <p className="eyebrow"><span/> Simple guides for Indian users</p>
+        <h1>ShreeWin Game – Login, Register, APK, Games &amp; Withdrawal Guide</h1>
+        <p className="hero-lead">Learn how ShreeWin Game works before you open it. We explain the ShreeWin login and registration steps, Android APK download, WinGo, K3, 5D, Aviator, deposits, bank and UPI withdrawals, gift codes, bonuses, referral and agent work in simple English.</p>
         <div className="hero-actions"><CTAButton kind="register">Register <span>↗</span></CTAButton><CTAButton kind="login">Login <span>↗</span></CTAButton><a className="button button-text" href="#shree-win-apk">Explore Shree Win APK <span>↓</span></a></div>
-        <ul className="hero-trust"><li><b>Complete platform map</b><span>Games, account, wallet and agency topics</span></li><li><b>Clear money guides</b><span>Deposit rules and withdrawal methods</span></li><li><b>Independent resource</b><span>No credentials collected</span></li></ul>
+        <ul className="hero-trust"><li><b>Step-by-step help</b><span>Short and clear instructions</span></li><li><b>Indian payment guide</b><span>UPI, bank and USDT information</span></li><li><b>Safe account access</b><span>We never collect your login details</span></li></ul>
       </div>
       <div className="app-visual" aria-label="Shree Win app interface preview">
         <div className="phone-frame"><div className="phone-notch"/><Image src="/preview-home.webp" width="720" height="1732" alt="Shree Win game homepage showing lottery and gaming categories" priority sizes="(max-width: 680px) 245px, 310px" /></div>
-        <div className="visual-chip chip-one"><span>◎</span><b>TRX WinGo</b><small>Lottery section</small></div>
-        <div className="visual-chip chip-two"><span>🏍</span><b>MotoRace</b><small>Featured game</small></div>
+        <div className="visual-chip chip-one"><span>⑧</span><b>WinGo • K3 • 5D</b><small>Game information</small></div>
+        <div className="visual-chip chip-two"><span>₹</span><b>UPI • Bank • USDT</b><small>Withdrawal guide</small></div>
       </div>
     </div>
   </section>;
