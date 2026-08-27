@@ -41,7 +41,7 @@ export function GameCard({ label, title, copy, href, icon }: { label: string; ti
 }
 
 export function ScreenshotGallery() {
-  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}<figure className="placeholder-shot"><div><span>Account preview</span><small>Administrator image can be added from the central configuration.</small></div><figcaption><span>08</span>Account</figcaption></figure></div>;
+  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}<figure className="placeholder-shot"><div><span>Account preview</span><small>Account screen image will be added here.</small></div><figcaption><span>08</span>Account</figcaption></figure></div>;
 }
 
 export function FAQAccordion({ items }: { items: readonly (readonly [string, string])[] }) {
@@ -54,7 +54,7 @@ export function ArticleCard({ title, copy, href, number }: { title: string; copy
 
 export function InfoTable() {
   const rows = ['Mobile Interface','Phone & Email Account Access','Password Reset','Lottery Category','TRX WinGo','MotoRace','Mini Games','Casino Category','Promotions','Activity Section','UPI & Bank Withdrawal','USDT Withdrawal','Agency / Invitation System','Account Section'];
-  return <div className="table-wrap"><table><thead><tr><th>Feature</th><th>Shree Win</th></tr></thead><tbody>{rows.map(row => <tr key={row}><td>{row}</td><td><span aria-label="Observed in the current interface">✓</span> Observed</td></tr>)}</tbody></table></div>;
+  return <div className="table-wrap"><table><thead><tr><th>Feature</th><th>Shree Win</th></tr></thead><tbody>{rows.map(row => <tr key={row}><td>{row}</td><td><span aria-label="Available in Shree Win">✓</span> Available</td></tr>)}</tbody></table></div>;
 }
 
 export function SafetyNotice({ title = 'APK Safety Tips', children }: { title?: string; children: React.ReactNode }) {
@@ -62,5 +62,5 @@ export function SafetyNotice({ title = 'APK Safety Tips', children }: { title?: 
 }
 
 export function ResponsibleGamingNotice() {
-  return <section className="responsible-notice"><div><span>Responsible gaming</span><h2>Understand the risk before you play.</h2><p>Gaming involving money carries financial risk, and outcomes are never guaranteed. Check applicable local laws, meet age requirements, set firm time and spending limits, never borrow money to play, and never chase losses.</p></div><a className="button button-outline" href="/responsible-gaming">Read Responsible Gaming Guide</a></section>;
+  return <section className="responsible-notice"><div><span>Responsible gaming</span><h2>Play only within your limits.</h2><p>Paid gaming can cause a financial loss. You must be 18+, check the gaming rules in your area, set time and amount limits, never borrow funds to play and never chase a loss.</p></div><a className="button button-outline" href="/responsible-gaming">Read Responsible Gaming Guide</a></section>;
 }

@@ -1,9 +1,13 @@
+const siteDomain = (process.env.NEXT_PUBLIC_SITE_URL || 'https://shreewinapk.net').replace(/\/+$/, '');
+const loginUrl = process.env.NEXT_PUBLIC_LOGIN_URL || 'https://shreewin1.com';
+const registerUrl = process.env.NEXT_PUBLIC_REGISTER_URL || 'https://shreewin1.com';
+
 export const siteConfig = {
   brand: 'ShreeWin',
   siteName: 'ShreeWinAPK.net',
-  domain: 'https://shreewinapk.net',
-  loginUrl: 'https://shreewin1.com',
-  registerUrl: 'https://shreewin1.com',
+  domain: siteDomain,
+  loginUrl,
+  registerUrl,
   logo: '/shreewin-logo.webp',
   apkUrl: null as string | null,
   apkVersion: null as string | null,

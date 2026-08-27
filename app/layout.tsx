@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import { DM_Sans } from 'next/font/google';
 import { siteConfig } from './site-config';
 import './globals.css';
-
-const sans = DM_Sans({ variable: '--font-sans', subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -32,11 +29,11 @@ export const metadata: Metadata = {
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebSite', '@id': `${siteConfig.domain}/#website`, name: siteConfig.siteName, url: `${siteConfig.domain}/`, description: 'Independent guides covering Shree Win APK, games, account access, promotions, withdrawals and agency information.', inLanguage: 'en-IN', publisher: { '@id': `${siteConfig.domain}/#organization` } },
-    { '@type': 'Organization', '@id': `${siteConfig.domain}/#organization`, name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}`, width: 540, height: 180 }, description: 'Independent informational website covering Shree Win APK, game categories, account, withdrawal, agency and safety information.' },
+    { '@type': 'WebSite', '@id': `${siteConfig.domain}/#website`, name: siteConfig.siteName, url: `${siteConfig.domain}/`, description: 'ShreeWin guides for the APK, games, login, registration, promotions, withdrawals and agent work.', inLanguage: 'en-IN', publisher: { '@id': `${siteConfig.domain}/#organization` } },
+    { '@type': 'Organization', '@id': `${siteConfig.domain}/#organization`, name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}`, width: 540, height: 180 }, description: 'ShreeWinAPK.net explains the ShreeWin app, games, account, wallet, promotions and agent features.' },
   ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-IN"><body className={sans.variable}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />{children}</body></html>;
+  return <html lang="en-IN"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />{children}</body></html>;
 }

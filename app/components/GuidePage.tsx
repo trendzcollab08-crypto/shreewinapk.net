@@ -54,7 +54,7 @@ export function GuidePage({ slug }: { slug: string }) {
       <aside className="guide-sidebar">
         <div className="side-card"><span>On this page</span>{page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}</div>
         <div className="side-card guide-directory"><span>Explore Shree Win</span><a href="/shree-win-apk">APK &amp; app overview</a><a href="/shree-win-games">Games directory</a><a href="/shree-win-promotion">Promotion rules</a><a href="/shree-win-withdrawal">Withdrawal methods</a><a href="/shree-win-agent">Agent work</a><a href="/shree-win-login">Login help</a><a href="/shree-win-register">Registration help</a></div>
-        <SafetyNotice title="Credential safety"><p>Never share a platform password, OTP, withdrawal password, UPI PIN, banking PIN or card credential with this website or another person.</p></SafetyNotice>
+        <SafetyNotice title="Keep your account safe"><p>Never share your ShreeWin password, OTP, withdrawal password, UPI PIN, bank PIN or card details with this website or another person.</p></SafetyNotice>
       </aside>
     </div></section>
 
