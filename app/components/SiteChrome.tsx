@@ -29,12 +29,13 @@ export function MobileNav({ active = 'home' }: { active?: ActivePage }) {
 export function SiteFooter() {
   return <footer className="site-footer">
     <div className="footer-grid">
-      <div className="footer-brand"><img src="/shreewin-logo.png" alt="ShreeWin"/><p>One vibrant destination for popular games, activities, promotions and mobile play.</p><span>18+ only · Terms apply · Play responsibly</span></div>
+      <div className="footer-brand"><img src="/shreewin-logo.png" alt="Shree Win Game logo"/><p>Shree Win product information, Login and Register help, game-rule explanations, Activity terms and responsible-play education.</p><span>18+ only · Eligibility and local laws apply · Play responsibly</span></div>
       <nav><strong>Games</strong><a href="/games#recommended">Recommended</a><a href="/wingo">WinGo</a><a href="/games#mini-games">Mini Games</a><a href="/games#casino">Casino</a></nav>
       <nav><strong>Shree Win</strong><a href="/login">Login</a><a href="/register">Register</a><a href="/wallet">Wallet & Payments</a><a href="/download">Download App</a></nav>
       <nav><strong>Information</strong><a href="/activity">Activity</a><a href="/first-deposit-bonus">First Deposit Bonus</a><a href="/promotion">Promotion</a><a href="/support">Support</a><a href="/responsible-play">Responsible Play</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a></nav>
     </div>
-    <div className="footer-bottom"><span>© 2026 Shree Win Game. All rights reserved.</span><span>Results and promotional eligibility are subject to the active in-product rules.</span></div>
+    <div className="education-disclosure"><b>Information & Responsible Play Notice</b><p>This website provides Shree Win product information, account-help content, game-rule explanations and responsible-play education. Some product features may involve financial risk. No result, reward or income is guaranteed. Access is intended only for eligible adults aged 18+ and remains subject to applicable local laws and the current product terms.</p></div>
+    <div className="footer-bottom"><span>© 2026 Shree Win Game. All rights reserved.</span><span>Results, rewards and promotional eligibility are subject to the active in-product rules.</span></div>
   </footer>;
 }
 

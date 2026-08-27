@@ -7,20 +7,20 @@ const display = Playfair_Display({ variable: '--font-display', subsets: ['latin'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shree-win-game.net'),
-  title: { default: 'Shree Win Game | Login, Register & Play Online', template: '%s' },
-  description: 'Explore Shree Win Game online—WinGo, K3, 5D, JILI, mini games, casino, Activity and Promotion. Login, register or download the Android app.',
+  title: { default: 'Shree Win Game Information | Login, Register & App', template: '%s' },
+  description: 'Learn about Shree Win Game Login, registration, Android app, WinGo, game categories, wallet steps, Activity, Promotion and responsible-play rules.',
   keywords: ['Shree Win Game','Shree Win login','Shree Win email login','Shree Win register','Shree Win app download','Shree Win APK','Shree Win WinGo','Shree Win games','Shree Win first deposit bonus'],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Shree Win Game | One Vibrant Game Experience',
-    description: 'Explore Shree Win games, account access, Activity, Promotion, Wallet and the Android app in one modern experience.',
+    title: 'Shree Win Game Information | Login, Register & App',
+    description: 'Review Shree Win Login, registration, game categories, Activity, Promotion, Wallet and Android app information.',
     url: '/', siteName: 'Shree Win Game', type: 'website', locale: 'en_IN',
     images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Shree Win Game — every game, one vibrant experience' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shree Win Game | One Vibrant Game Experience',
-    description: 'Explore games, Login, Register, Activity, Promotion, Wallet and the Shree Win Android app.',
+    title: 'Shree Win Game Information | Login, Register & App',
+    description: 'Review Shree Win Login, registration, games, Activity, Promotion, Wallet and Android app information.',
     images: ['/og.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
@@ -32,7 +32,7 @@ const schema = {
     {
       '@type':'WebSite', '@id':'https://shree-win-game.net/#website',
       name:'Shree Win Game', url:'https://shree-win-game.net/',
-      description:'Shree Win Game brings game discovery, account access, Activity, Promotion, Wallet and Android app information into one mobile-first website.',
+      description:'Shree Win Game information covering Login, registration, Android app access, game categories, Activity, Promotion, Wallet and responsible-play rules.',
       inLanguage:'en-IN', publisher:{ '@id':'https://shree-win-game.net/#brand' },
     },
     {
