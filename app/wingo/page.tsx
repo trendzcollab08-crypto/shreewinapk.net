@@ -1,16 +1,3 @@
-import type { Metadata } from 'next';
-import { PageShell } from '../components/SiteChrome';
-import { FaqBlock, InfoHero, ProductNotice } from '../components/InfoBlocks';
+import { permanentRedirect } from 'next/navigation';
 
-export const metadata:Metadata={title:'Shree Win WinGo | How Rounds, Colours & Numbers Work',description:'Understand Shree Win WinGo round flow, timers, colour and number choices, result history, rule checks and responsible play before opening the game.',alternates:{canonical:'/wingo'}};
-const faqs:[string,string][]=[
-  ['What is Shree Win WinGo?','WinGo is a round-based game category in which available choices and a countdown are presented before each result. Use the in-game rules for the exact format.'],
-  ['Which round durations are available?','Available durations can change. Select only from the timers currently shown in the live WinGo screen.'],
-  ['How are colours and numbers connected?','Mappings can differ by version or game room. The active rules panel defines the valid relationship and settlement for that room.'],
-  ['Where can I check previous results?','Use the result or history area within the selected game. Past results do not predict the next round.'],
-  ['Does a strategy guarantee a win?','No. No sequence, chart or strategy can guarantee a result. Treat every amount as money you can afford to lose.'],
-];
-export default function WinGoPage(){return <PageShell active="games"><main><InfoHero eyebrow="SHREE WIN WINGO" title="Know the round" accent="before the countdown ends." copy="Understand the visible timer, available choices, result history and active settlement rules before participating in WinGo." current="WinGo" icon="⏱" primary={{label:'See round flow',href:'#details'}}/>
-  <section className="content-section info-page" id="details"><div className="section-title"><span>WINGO ROUND FLOW</span><h2>Four things happen in every round.</h2><p>The exact choice labels and settlement can vary, so the live game rules always take priority.</p></div><div className="step-list"><article><b>01</b><div><h2>Select the active room</h2><p>Choose only from WinGo rooms and durations displayed in the current lobby.</p></div></article><article><b>02</b><div><h2>Review the available choices</h2><p>The game may present colour, number or size choices. Read how each is settled.</p></div></article><article><b>03</b><div><h2>Confirm before the timer closes</h2><p>A round stops accepting choices at the time shown by the game.</p></div></article><article><b>04</b><div><h2>Check result and history</h2><p>Use the official result shown in the selected room and review your account record.</p></div></article></div><ProductNotice>We do not hard-code colour-to-number mappings or timers because these can change between rooms. Open “Game Rules” inside the active WinGo screen before playing.</ProductNotice></section>
-  <section className="risk-band"><div><span>RESPONSIBLE WINGO PLAY</span><h2>A fast timer should never rush a financial decision.</h2></div><ul><li>Set a fixed entertainment limit before opening the game.</li><li>Do not chase a previous result or try to recover losses.</li><li>Past colours and numbers do not guarantee the next outcome.</li><li>Stop when the session is no longer enjoyable.</li></ul></section>
-  <FaqBlock title="WinGo questions" items={faqs}/><section className="page-cta"><span>EXPLORE MORE</span><h2>See the complete Shree Win game lobby.</h2><a className="primary-button" href="/games">View all categories →</a></section></main></PageShell>}
+export default function LegacyRedirect() { permanentRedirect('/trx-wingo'); }

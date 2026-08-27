@@ -1,17 +1,4 @@
-import type { Metadata } from 'next';
-import { PageShell } from '../components/SiteChrome';
-import { InfoHero, ProductNotice } from '../components/InfoBlocks';
-export const metadata:Metadata={title:'Website Terms | Shree Win Game',description:'Read the website terms for Shree Win Game, including eligibility, account security, product information, promotions, intellectual property and responsible use.',alternates:{canonical:'/terms'}};
-export default function TermsPage(){return <PageShell><main><InfoHero eyebrow="WEBSITE TERMS" title="Clear rules for using" accent="shree-win-game.net." copy="These website terms explain how visitors may use this product website. Live account, game, payment and promotion terms shown in the connected product also apply." current="Terms" icon="§" primary={{label:'Read terms',href:'#details'}}/>
- <article className="legal-content" id="details"><p className="legal-updated">Last updated: 27 August 2026</p><ProductNotice>No legal entity name, licence number or regulator information has been provided. Those details must be inserted and verified before a public commercial launch.</ProductNotice>
- <h2>1. Scope</h2><p>These terms govern access to the pages and content available on shree-win-game.net. Features connected to an account, game provider, wallet, promotion or downloadable app may include additional terms displayed at the point of use.</p>
- <h2>2. Eligibility</h2><p>The service is intended only for adults who meet all applicable age, identity, location and legal requirements. You must not register or participate where prohibited.</p>
- <h2>3. Account responsibility</h2><p>You are responsible for accurate registration information, keeping credentials private and promptly reporting unfamiliar access. Never share a password, OTP or payment PIN.</p>
- <h2>4. Game information and results</h2><p>Each game’s active rules, timer, choices, results and settlement record take priority over general website descriptions. No content promises a result, return, win rate or income.</p>
- <h2>5. Wallet and payments</h2><p>Supported methods, limits, fees, verification and processing information are displayed in the live Wallet before confirmation. Users must verify transaction details and use payment methods they are authorised to use.</p>
- <h2>6. Activities and promotions</h2><p>Activities and promotions can be subject to dates, eligibility, qualifying actions, exclusions, calculation rules, expiry and account restrictions. The active campaign terms apply.</p>
- <h2>7. Acceptable use</h2><p>Do not misuse the website, attempt unauthorised access, automate prohibited activity, manipulate results, infringe rights or use the service for unlawful purposes.</p>
- <h2>8. Intellectual property</h2><p>Shree Win names, artwork, interface elements and site content may be protected by intellectual-property rights. No licence is granted beyond personal use of the service as permitted by applicable terms.</p>
- <h2>9. Changes and availability</h2><p>Pages, games, promotions and technical access may change. Material commercial and legal details should be displayed in the connected product before they affect a user.</p>
- <h2>10. Responsible use</h2><p>Use the service only as entertainment. Set personal limits and never treat gaming as income or a way to recover financial loss.</p>
- <h2>11. Contact</h2><p>Use the verified Support entry displayed inside the live product. A legal contact address should be added here when supplied by the operator.</p></article></main></PageShell>}
+import { buildGuideMetadata, GuidePage } from '../components/GuidePage';
+
+export const metadata = buildGuideMetadata('terms');
+export default function Page() { return <GuidePage slug="terms" />; }
