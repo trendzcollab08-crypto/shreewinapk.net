@@ -32,7 +32,7 @@ export function SiteFooter() {
       <div className="footer-brand"><img src="/shreewin-logo.png" alt="ShreeWin"/><p>One vibrant destination for popular games, activities, promotions and mobile play.</p><span>18+ only · Terms apply · Play responsibly</span></div>
       <nav><strong>Games</strong><a href="/games#recommended">Recommended</a><a href="/wingo">WinGo</a><a href="/games#mini-games">Mini Games</a><a href="/games#casino">Casino</a></nav>
       <nav><strong>Shree Win</strong><a href="/login">Login</a><a href="/register">Register</a><a href="/wallet">Wallet & Payments</a><a href="/download">Download App</a></nav>
-      <nav><strong>Information</strong><a href="/activity">Activity</a><a href="/promotion">Promotion</a><a href="/support">Support</a><a href="/responsible-play">Responsible Play</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a></nav>
+      <nav><strong>Information</strong><a href="/activity">Activity</a><a href="/first-deposit-bonus">First Deposit Bonus</a><a href="/promotion">Promotion</a><a href="/support">Support</a><a href="/responsible-play">Responsible Play</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a></nav>
     </div>
     <div className="footer-bottom"><span>© 2026 Shree Win Game. All rights reserved.</span><span>Results and promotional eligibility are subject to the active in-product rules.</span></div>
   </footer>;

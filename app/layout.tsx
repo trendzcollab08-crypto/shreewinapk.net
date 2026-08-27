@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://shree-win-game.net'),
   title: { default: 'Shree Win Game | Login, Register & Play Online', template: '%s' },
   description: 'Explore Shree Win Game online—WinGo, K3, 5D, JILI, mini games, casino, Activity and Promotion. Login, register or download the Android app.',
-  keywords: ['Shree Win Game','Shree Win login','Shree Win register','Shree Win app download','Shree Win APK','Shree Win WinGo','Shree Win games'],
+  keywords: ['Shree Win Game','Shree Win login','Shree Win email login','Shree Win register','Shree Win app download','Shree Win APK','Shree Win WinGo','Shree Win games','Shree Win first deposit bonus'],
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Shree Win Game | One Vibrant Game Experience',
