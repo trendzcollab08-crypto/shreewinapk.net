@@ -13,5 +13,10 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(`${siteConfig.lastUpdated}T00:00:00+05:30`);
-  return routes.map(([path, priority, changeFrequency]) => ({ url: `${siteConfig.domain}${path}`, lastModified, changeFrequency, priority }));
+  return routes.map(([path, priority, changeFrequency]) => ({
+    url: path ? `${siteConfig.domain}${path}/` : `${siteConfig.domain}/`,
+    lastModified,
+    changeFrequency,
+    priority,
+  }));
 }
