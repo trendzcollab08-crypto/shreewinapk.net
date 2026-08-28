@@ -20,7 +20,7 @@ export function buildGuideMetadata(slug: string): Metadata {
 export function GuidePage({ slug }: { slug: string }) {
   const page = guidePages[slug];
   const canonical = `${siteConfig.domain}/${page.slug}/`;
-  const updatedLabel = new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${siteConfig.lastUpdated}T00:00:00+05:30`));
+  const updatedLabel = new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' }).format(new Date(`${siteConfig.lastUpdated}T00:00:00+05:30`));
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
