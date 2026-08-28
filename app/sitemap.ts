@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from './site-config';
 
+export const dynamic = 'force-static';
+
 const routes = [
   ['',1,'weekly'],['/shree-win-apk',.95,'weekly'],['/shree-win-download',.9,'weekly'],['/shree-win-login',.85,'monthly'],
   ['/shree-win-register',.85,'monthly'],['/shree-win-games',.9,'weekly'],['/shree-win-lottery',.85,'weekly'],['/trx-wingo',.85,'weekly'],

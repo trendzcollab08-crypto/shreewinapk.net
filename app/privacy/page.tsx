@@ -1,3 +1,3 @@
-import { permanentRedirect } from 'next/navigation';
+import { StaticRedirect } from '../components/StaticRedirect';
 
-export default function LegacyRedirect() { permanentRedirect('/privacy-policy'); }
+export default function LegacyRedirect() { return <StaticRedirect destination="/privacy-policy/" label="Privacy Policy" />; }

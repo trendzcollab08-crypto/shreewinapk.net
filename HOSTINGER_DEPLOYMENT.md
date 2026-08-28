@@ -1,5 +1,19 @@
 # Hostinger deployment
 
+## Standard Git deployment (recommended for this hosting setup)
+
+The `main` branch contains the editable Next.js source. GitHub Actions builds a
+fully static export and publishes the generated files to the `hostinger` branch.
+Connect Hostinger Advanced Git deployment to the `hostinger` branch, not `main`.
+The deployment branch has `index.html` at its root and needs no Node.js or npm
+commands on Hostinger.
+
+Every push to `main` refreshes the `hostinger` branch automatically. The workflow
+runs `npm run build:static`; normal `npm run build` remains available for the
+Node.js Web App alternative.
+
+## Node.js Web App alternative
+
 This project is a Next.js 16 Node.js application. It is not a static `public_html` upload.
 
 ## Hostinger application settings

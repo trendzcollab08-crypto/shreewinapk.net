@@ -1,3 +1,3 @@
-import { permanentRedirect } from 'next/navigation';
+import { StaticRedirect } from '../components/StaticRedirect';
 
-export default function LegacyRedirect() { permanentRedirect('/shree-win-login'); }
+export default function LegacyRedirect() { return <StaticRedirect destination="/shree-win-login/" label="ShreeWin Login" />; }

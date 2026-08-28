@@ -1,0 +1,38 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteRule ^login/?$ /shree-win-login/ [R=301,L]
+RewriteRule ^register/?$ /shree-win-register/ [R=301,L]
+RewriteRule ^download/?$ /shree-win-download/ [R=301,L]
+RewriteRule ^games/?$ /shree-win-games/ [R=301,L]
+RewriteRule ^wingo/?$ /trx-wingo/ [R=301,L]
+RewriteRule ^activity/?$ /shree-win-promotion/ [R=301,L]
+RewriteRule ^promotion/?$ /shree-win-promotion/ [R=301,L]
+RewriteRule ^wallet/?$ /shree-win-withdrawal/ [R=301,L]
+RewriteRule ^support/?$ /contact/ [R=301,L]
+RewriteRule ^privacy/?$ /privacy-policy/ [R=301,L]
+RewriteRule ^responsible-play/?$ /responsible-gaming/ [R=301,L]
+RewriteRule ^first-deposit-bonus/?$ /shree-win-promotion/#section-2 [R=301,L,NE]
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml image/svg+xml
+</IfModule>

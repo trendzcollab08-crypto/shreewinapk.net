@@ -1,3 +1,3 @@
-import { permanentRedirect } from 'next/navigation';
+import { StaticRedirect } from '../components/StaticRedirect';
 
-export default function LegacyRedirect() { permanentRedirect('/trx-wingo'); }
+export default function LegacyRedirect() { return <StaticRedirect destination="/trx-wingo/" label="TRX WinGo" />; }
