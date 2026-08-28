@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { siteConfig } from '../site-config';
 
-const externalProps = { target: '_blank', rel: 'noopener noreferrer' } as const;
+const externalProps = { target: '_blank', rel: 'sponsored noopener noreferrer' } as const;
 
 export function CTAButton({ kind, children, className = '' }: { kind: 'login' | 'register'; children: React.ReactNode; className?: string }) {
   const href = kind === 'login' ? siteConfig.loginUrl : siteConfig.registerUrl;
@@ -14,7 +14,7 @@ export function Hero() {
       <div className="hero-copy">
         <p className="eyebrow"><span/> Shree Win Game Information</p>
         <h1>ShreeWin Game – Login, Register, APK, Games &amp; Withdrawal Guide</h1>
-        <p className="hero-lead">Shree Win offers instant customer support, APK access, phone and email registration, login and password reset, Lobby, Lottery, Popular, Mini Game and Casino navigation, Gift Codes as rewards, TRX WinGo, MotoRace, current promotion rules, withdrawal methods and a six-level agency system.</p>
+        <p className="hero-lead">Shree Win brings account access, Android APK, game categories, wallet tools, promotions, Gift Codes, TRX WinGo, MotoRace and six-level Agency features into one mobile interface. Our guides cover phone and email registration, login, password reset, deposits, withdrawals, support, promotion rules, results and account safety.</p>
         <div className="hero-actions"><CTAButton kind="register">Register <span>↗</span></CTAButton><CTAButton kind="login">Login <span>↗</span></CTAButton><a className="button button-text" href="#shree-win-apk">Explore Shree Win APK <span>↓</span></a></div>
         <ul className="hero-trust"><li><b>Step-by-step help</b><span>Short and clear instructions</span></li><li><b>Indian payment guide</b><span>UPI, bank and USDT information</span></li><li><b>Safe account access</b><span>We never collect your login details</span></li></ul>
       </div>
@@ -41,7 +41,7 @@ export function GameCard({ label, title, copy, href, icon }: { label: string; ti
 }
 
 export function ScreenshotGallery() {
-  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}<figure className="placeholder-shot"><div><span>Account preview</span><small>Account screen image will be added here.</small></div><figcaption><span>08</span>Account</figcaption></figure></div>;
+  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}</div>;
 }
 
 export function FAQAccordion({ items }: { items: readonly (readonly [string, string])[] }) {
@@ -62,5 +62,5 @@ export function SafetyNotice({ title = 'APK Safety Tips', children }: { title?: 
 }
 
 export function ResponsibleGamingNotice() {
-  return <section className="responsible-notice"><div><span>Responsible gaming</span><h2>Play only within your limits.</h2><p>Paid gaming can cause a financial loss. You must be 18+, check the gaming rules in your area, set time and amount limits, never borrow funds to play and never chase a loss.</p></div><a className="button button-outline" href="/responsible-gaming">Read Responsible Gaming Guide</a></section>;
+  return <section className="responsible-notice"><div><span>Responsible gaming</span><h2>Play only within your limits.</h2><p>Paid gaming can cause a financial loss. You must be 18+, check the gaming rules in your area, set time and amount limits, never borrow funds to play and never chase a loss.</p></div><a className="button button-outline" href="/responsible-gaming/">Read Responsible Gaming Guide</a></section>;
 }

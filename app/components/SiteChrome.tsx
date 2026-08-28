@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '../site-config';
 
-const externalProps = { target: '_blank', rel: 'noopener noreferrer' } as const;
+const externalProps = { target: '_blank', rel: 'sponsored noopener noreferrer' } as const;
 
 export function Header() {
   return <header className="site-header">
@@ -36,9 +36,9 @@ export function Footer() {
         <p>Clear ShreeWin guides for the APK, games, login, deposits, withdrawals, gift codes and agent work.</p>
         <div className="trust-chips"><span>Complete Information</span><span>Safety Guidance</span></div>
       </div>
-      <nav aria-label="Footer guides"><h2>Guides</h2><a href="/shree-win-apk">ShreeWin APK</a><a href="/shree-win-download">Download Guide</a><a href="/shree-win-games">Games</a><a href="/trx-wingo">TRX WinGo</a><a href="/motorace">MotoRace</a><a href="/blog">Blog</a></nav>
-      <nav aria-label="Footer account information"><h2>Account &amp; Money</h2><a href="/shree-win-login">Login Guide</a><a href="/shree-win-register">Register Guide</a><a href="/shree-win-promotion">Promotion Guide</a><a href="/shree-win-withdrawal">Withdrawal Guide</a><a href="/shree-win-agent">Agent Work</a><a href={siteConfig.loginUrl} {...externalProps}>Login ↗</a><a href={siteConfig.registerUrl} {...externalProps}>Register ↗</a></nav>
-      <nav aria-label="Footer policies"><h2>Information</h2><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/responsible-gaming">Responsible Gaming</a></nav>
+      <nav aria-label="Footer guides"><h2>Guides</h2><a href="/shree-win-apk/">ShreeWin APK</a><a href="/shree-win-download/">Download Guide</a><a href="/shree-win-games/">Games</a><a href="/trx-wingo/">TRX WinGo</a><a href="/motorace/">MotoRace</a><a href="/blog/">Blog</a></nav>
+      <nav aria-label="Footer account information"><h2>Account &amp; Money</h2><a href="/shree-win-login/">Login Guide</a><a href="/shree-win-register/">Register Guide</a><a href="/shree-win-promotion/">Promotion Guide</a><a href="/shree-win-withdrawal/">Withdrawal Guide</a><a href="/shree-win-agent/">Agent Work</a><a href={siteConfig.loginUrl} {...externalProps}>Login ↗</a><a href={siteConfig.registerUrl} {...externalProps}>Register ↗</a></nav>
+      <nav aria-label="Footer policies"><h2>Information</h2><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a><a href="/responsible-gaming/">Responsible Gaming</a></nav>
     </div>
     <div className="container footer-disclaimer">
       <strong>About ShreeWinAPK.net</strong>
