@@ -41,10 +41,20 @@ export function GuidePage({ slug }: { slug: string }) {
     author: { '@type': 'Organization', name: `${siteConfig.siteName} Editorial Team`, url: `${siteConfig.domain}/about/` },
     publisher: { '@type': 'Organization', name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}` } },
   };
+  const faqSchema = slug === 'shree-win-faq' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.sections.map(section => ({
+      '@type': 'Question',
+      name: section.heading,
+      acceptedAnswer: { '@type': 'Answer', text: section.paragraphs.join(' ') },
+    })),
+  } : null;
 
   return <PageShell><main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
     <section className="guide-hero"><div className="container">
       <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span aria-current="page">{page.h1}</span></nav>
       <p className="eyebrow"><span/>{page.eyebrow}</p>
@@ -68,7 +78,8 @@ export function GuidePage({ slug }: { slug: string }) {
       </article>
       <aside className="guide-sidebar">
         <div className="side-card"><span>On this page</span>{page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}</div>
-        <div className="side-card guide-directory"><span>Explore Shree Win</span><a href="/shree-win-apk/">APK &amp; app overview</a><a href="/shree-win-games/">Games directory</a><a href="/shree-win-promotion/">Promotion rules</a><a href="/shree-win-withdrawal/">Withdrawal methods</a><a href="/shree-win-agent/">Agent work</a><a href="/shree-win-login/">Login help</a><a href="/shree-win-register/">Registration help</a></div>
+        <div className="side-card guide-directory"><span>Explore Shree Win</span><a href="/shree-win-apk/">APK &amp; app overview</a><a href="/shree-win-games/">Games directory</a><a href="/shree-win-deposit/">Deposit help</a><a href="/shree-win-withdrawal/">Withdrawal methods</a><a href="/shree-win-gift-code/">Gift Code guide</a><a href="/shree-win-login/">Login help</a><a href="/shree-win-register/">Registration help</a></div>
+        <div className="side-card guide-directory"><span>Account &amp; safety</span><a href="/shree-win-account-settings/">Account settings</a><a href="/shree-win-account-recovery/">Account recovery</a><a href="/shree-win-login-problems/">Login problems</a><a href="/shree-win-apk-safety/">APK safety</a><a href="/shree-win-phishing-warning/">Fake-link warning</a><a href="/shree-win-faq/">ShreeWin FAQ</a></div>
         <SafetyNotice title="Keep your account safe"><p>Never share your ShreeWin password, OTP, withdrawal password, UPI PIN, bank PIN or card details with this website or another person.</p></SafetyNotice>
       </aside>
     </div></section>

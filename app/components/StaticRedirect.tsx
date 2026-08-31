@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export function buildStaticRedirectMetadata(destination: string, label: string): Metadata {
+  return {
+    title: `${label} – Page Moved`,
+    description: `Continue to the updated ${label} page on ShreeWinAPK.net.`,
+    robots: { index: false, follow: true },
+    alternates: { canonical: destination },
+  };
+}
 
 export function StaticRedirect({ destination, label }: { destination: string; label: string }) {
   return (
