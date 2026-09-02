@@ -10,7 +10,16 @@ export const metadata: Metadata = {
   applicationName: siteConfig.siteName,
   category: 'Gaming information',
   alternates: { canonical: '/' },
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: [
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: '/favicon-512.png?v=2', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon-32x32.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png?v=2', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico?v=2',
+    apple: [{ url: '/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     title: 'ShreeWin Game – Login, Register, APK & Complete Guide',
     description: 'Complete ShreeWin Game information for login, registration, APK, games, deposits, withdrawals, gift codes and agent work.',

@@ -1,6 +1,13 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 19.2727C22 20.779 20.779 22 19.2727 22H14.7273C13.221 22 12 20.779 12 19.2727V12H19.2727C20.779 12 22 13.221 22 14.7273V19.2727Z" fill="#68C4FF"/>
-<path d="M20 2C21.1046 2 22 2.89543 22 4V7C22 8.10457 21.1046 9 20 9H17C15.8954 9 15 8.10457 15 7V4C15 2.89543 15.8954 2 17 2H20Z" fill="#0C79D8"/>
-<path d="M7 15C8.10457 15 9 15.8954 9 17V20C9 21.1046 8.10457 22 7 22H4C2.89543 22 2 21.1046 2 20V17C2 15.8954 2.89543 15 4 15H7Z" fill="#0C79D8"/>
-<path d="M12 12H4.72727C3.22104 12 2 10.779 2 9.27273V4.72727C2 3.22104 3.22104 2 4.72727 2H9.27273C10.779 2 12 3.22104 12 4.72727V12Z" fill="#2E9EFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Shree Win">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="58" y2="62" gradientUnits="userSpaceOnUse"><stop stop-color="#102f75"/><stop offset="1" stop-color="#041331"/></linearGradient>
+    <linearGradient id="gold" x1="12" y1="24" x2="28" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#fff36a"/><stop offset=".48" stop-color="#ffbd16"/><stop offset="1" stop-color="#ff7b00"/></linearGradient>
+    <linearGradient id="blue" x1="31" y1="22" x2="54" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#e8fbff"/><stop offset=".45" stop-color="#63d8ff"/><stop offset="1" stop-color="#2485f5"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000a2e" flood-opacity=".8"/></filter>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)" stroke="#ffd33d" stroke-width="3"/>
+  <circle cx="49" cy="15" r="9" fill="#ffbd16" stroke="#fff7b0" stroke-width="2"/>
+  <path d="M47 9.5h5.2M46 13h6.2M48 9.5c4 1.6 3.5 7.3-1 8.4l5.2 4.6" fill="none" stroke="#9f5a00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(-12 14 14)"><rect x="7" y="7" width="15" height="15" rx="3.5" fill="#f32929" stroke="#fff" stroke-width="1.5"/><circle cx="11" cy="11" r="1.35" fill="#fff"/><circle cx="18" cy="11" r="1.35" fill="#fff"/><circle cx="14.5" cy="14.5" r="1.35" fill="#fff"/><circle cx="11" cy="18" r="1.35" fill="#fff"/><circle cx="18" cy="18" r="1.35" fill="#fff"/></g>
+  <g filter="url(#shadow)" font-family="Arial Black, Arial, sans-serif" font-weight="900" text-anchor="middle" paint-order="stroke fill"><text x="22" y="50" font-size="31" fill="url(#gold)" stroke="#fff" stroke-width="2.5">S</text><text x="43" y="50" font-size="30" fill="url(#blue)" stroke="#fff" stroke-width="2.5">W</text></g>
 </svg>
