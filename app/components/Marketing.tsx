@@ -57,6 +57,10 @@ export function InfoTable() {
   return <div className="table-wrap"><table><thead><tr><th>Feature</th><th>Shree Win</th></tr></thead><tbody>{rows.map(row => <tr key={row}><td>{row}</td><td><span aria-label="Available in Shree Win">✓</span> Available</td></tr>)}</tbody></table></div>;
 }
 
+export function ReferralEventTable() {
+  return <div className="table-wrap event-reward-table"><table><thead><tr><th>Leaderboard rank</th><th>Active-invite milestone</th><th>Listed reward</th></tr></thead><tbody>{siteConfig.grandReferralEvent.rewards.map(tier => <tr key={tier.rank}><td>{tier.rank}</td><td>{tier.milestone}</td><td>{tier.reward}</td></tr>)}</tbody></table></div>;
+}
+
 export function SafetyNotice({ title = 'APK Safety Tips', children }: { title?: string; children: React.ReactNode }) {
   return <aside className="safety-notice"><div aria-hidden="true">🛡</div><div><h3>{title}</h3>{children}</div></aside>;
 }

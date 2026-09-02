@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { guidePages } from '../guide-content';
 import { allFaqs, faqGroups } from '../faq-content';
 import { siteConfig } from '../site-config';
-import { CTAButton, FAQAccordion, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
+import { CTAButton, FAQAccordion, ReferralEventTable, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
 import { PageShell } from './SiteChrome';
 
 export function buildGuideMetadata(slug: string): Metadata {
@@ -79,6 +79,7 @@ export function GuidePage({ slug }: { slug: string }) {
           <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
           <h2>{section.heading}</h2>
           {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+          {slug === 'shree-win-grand-referral-event' && index === 0 && <ReferralEventTable />}
           {section.bullets && <ul>{section.bullets.map(item => <li key={item}>{item}</li>)}</ul>}
         </section>)}
       </article>

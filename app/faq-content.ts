@@ -400,6 +400,39 @@ export const faqGroups = [
     ]
   },
   {
+    "title": "Grand Referral Event 2026",
+    "items": [
+      [
+        "What is the ShreeWin Grand Referral Event 2026?",
+        "It is an Agency milestone event for eligible ShreeWin agents. The event tracks verified direct active invites and lists leaderboard rewards for qualifying positions. Open Promotion Center to check whether the event is available and to view your recorded progress."
+      ],
+      [
+        "Who counts as an active invite in the referral event?",
+        "An active invite must be a unique direct subordinate registered through the agent invitation link. The member must complete at least one deposit of ₹500 or more and place eligible activity on WinGo or TRX lottery games."
+      ],
+      [
+        "What are the Grand Referral Event milestones?",
+        "The listed thresholds are 50+, 200+, 500+, 1,200+, 2,500+ and 5,000+ verified active invites. Each threshold connects with a leaderboard position and the product or cash option shown in the event reward table."
+      ],
+      [
+        "How do I claim a ShreeWin referral milestone reward?",
+        "Login, open Promotion Center and select the Grand Referral Event. When the event marks a milestone as unlocked, open it and tap Receive. Check the Wallet and claim record after submission, and save a screenshot of the completed status."
+      ],
+      [
+        "What wagering condition applies to a milestone reward?",
+        "The event terms list a 1.0x wagering requirement. Complete the valid activity displayed with the reward before requesting an eligible withdrawal. Also check account verification and receiving details on the Withdrawal screen."
+      ],
+      [
+        "Are Grand Referral Event rewards guaranteed after registration?",
+        "No. Registration alone does not qualify an account for a milestone reward. The direct invited members must meet the active-player conditions, the agent must reach the required verified count and the event must confirm the final leaderboard position."
+      ],
+      [
+        "Where can I check the latest referral event rules?",
+        "Open the Grand Referral Event inside ShreeWin Promotion Center. Check event availability, dates, eligible games, active-invite count, product availability, cash option, claim window, wagering condition and withdrawal steps before taking action."
+      ]
+    ]
+  },
+  {
     "title": "Quick Hindi and Hinglish FAQs",
     "items": [
       [

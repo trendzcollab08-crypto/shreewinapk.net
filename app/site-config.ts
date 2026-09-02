@@ -22,6 +22,20 @@ export const siteConfig = {
     usdtMinimumInr: 1000,
   },
   agencyLevels: 6,
+  grandReferralEvent: {
+    name: 'ShreeWin Grand Referral Event 2026',
+    activeInviteDepositInr: 500,
+    qualifyingGames: ['WinGo', 'TRX lotteries'],
+    wageringRequirement: '1.0x',
+    rewards: [
+      { rank: '1st Place (Champion)', milestone: '5,000+ active invites', reward: 'Mercedes-Benz A-Class Limousine or ₹45,00,000 cash' },
+      { rank: '2nd Place (Runner-Up)', milestone: '2,500+ active invites', reward: '100 g 999.9 fine gold bar or ₹7,50,000 cash' },
+      { rank: '3rd Place', milestone: '1,200+ active invites', reward: 'Rolex Submariner Date watch or ₹3,50,000 cash' },
+      { rank: '4th–10th Place', milestone: '500+ active invites', reward: 'Apple iPhone 16 Pro Max 1 TB or ₹1,50,000 cash' },
+      { rank: '11th–50th Place', milestone: '200+ active invites', reward: 'Apple iPad Pro 12.9-inch or ₹75,000 cash' },
+      { rank: '51st–200th Place', milestone: '50+ active invites', reward: '₹10,000 wallet cash bonus' },
+    ],
+  },
   firstDepositTiers: [
     { depositInr: 300, bonusInr: 48 },
     { depositInr: 500, bonusInr: 108 },
