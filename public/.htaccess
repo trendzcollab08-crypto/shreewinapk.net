@@ -2,6 +2,8 @@ Options -Indexes
 DirectoryIndex index.html
 
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.shreewinapk\.net$ [NC]
+RewriteRule ^ https://shreewinapk.net%{REQUEST_URI} [R=301,L]
 RewriteRule ^login/?$ /shree-win-login/ [R=301,L]
 RewriteRule ^register/?$ /shree-win-register/ [R=301,L]
 RewriteRule ^download/?$ /shree-win-download/ [R=301,L]

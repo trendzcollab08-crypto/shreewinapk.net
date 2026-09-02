@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: { default: 'ShreeWin Game – Login, Register, APK & Complete Guide', template: '%s' },
   description: 'Learn ShreeWin Game login, registration, APK download, games, deposit, UPI withdrawal, gift code, referral and agent steps with clear instructions.',
-  keywords: ['ShreeWin','ShreeWin Game','ShreeWin login','ShreeWin register','ShreeWin APK','ShreeWin app download','ShreeWin games','ShreeWin Wingo','ShreeWin withdrawal','ShreeWin UPI withdrawal','ShreeWin bonus','ShreeWin invite code','ShreeWin agent','Shree Win'],
   applicationName: siteConfig.siteName,
   category: 'Gaming information',
   alternates: { canonical: '/' },

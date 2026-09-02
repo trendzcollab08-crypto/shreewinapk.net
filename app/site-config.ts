@@ -13,7 +13,7 @@ export const siteConfig = {
   apkVersion: null as string | null,
   apkSize: null as string | null,
   publishedDate: '2026-08-27',
-  lastUpdated: '2026-08-31',
+  lastUpdated: '2026-09-02',
   games: ['WinGo', 'K3', '5D', 'Aviator', 'TRX WinGo', 'MotoRace'],
   categories: ['Lobby', 'Lottery', 'Popular', 'Mini Game', 'Casino'],
   withdrawals: {

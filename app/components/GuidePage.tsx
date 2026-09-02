@@ -14,9 +14,8 @@ export function buildGuideMetadata(slug: string): Metadata {
   return {
     title: page.title,
     description: page.description,
-    keywords: page.keywords,
     alternates: { canonical },
-    openGraph: { title: page.title, description: page.description, url: canonical, type: 'article', images: image ? [{ url: image, width: page.image!.width, height: page.image!.height, alt: page.image!.alt }] : [] },
+    openGraph: { title: page.title, description: page.description, url: canonical, type: page.schemaType && page.schemaType !== 'Article' ? 'website' : 'article', images: image ? [{ url: image, width: page.image!.width, height: page.image!.height, alt: page.image!.alt }] : [] },
     twitter: { card: image ? 'summary_large_image' : 'summary', title: page.title, description: page.description, images: image ? [image] : [] },
   };
 }
@@ -34,18 +33,24 @@ export function GuidePage({ slug }: { slug: string }) {
       { '@type': 'ListItem', position: 2, name: page.h1, item: canonical },
     ],
   };
-  const articleSchema = {
+  const schemaType = page.schemaType || 'Article';
+  const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: page.h1,
+    '@type': schemaType,
+    '@id': `${canonical}#content`,
+    ...(schemaType === 'Article' ? { headline: page.h1 } : { name: page.h1 }),
     description: page.description,
-    mainEntityOfPage: canonical,
-    datePublished: siteConfig.publishedDate,
-    dateModified: lastUpdated,
+    url: canonical,
     inLanguage: 'en-IN',
-    author: { '@type': 'Organization', name: `${siteConfig.siteName} Editorial Team`, url: `${siteConfig.domain}/about/` },
-    publisher: { '@type': 'Organization', name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}` } },
-    ...(page.image ? { image: `${siteConfig.domain}${page.image.src}` } : {}),
+    isPartOf: { '@id': `${siteConfig.domain}/#website` },
+    ...(schemaType === 'Article' ? {
+      mainEntityOfPage: canonical,
+      datePublished: siteConfig.publishedDate,
+      dateModified: lastUpdated,
+      author: { '@type': 'Organization', name: `${siteConfig.siteName} Editorial Team`, url: `${siteConfig.domain}/about/` },
+      publisher: { '@id': `${siteConfig.domain}/#organization` },
+      ...(page.image ? { image: `${siteConfig.domain}${page.image.src}` } : {}),
+    } : {}),
   };
   const isFaqPage = slug === 'shree-win-faq';
   const visibleFaqs = isFaqPage ? allFaqs : page.faqs;
@@ -61,7 +66,7 @@ export function GuidePage({ slug }: { slug: string }) {
 
   return <PageShell><main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
     <section className="guide-hero"><div className="container">
       <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span aria-current="page">{page.h1}</span></nav>
