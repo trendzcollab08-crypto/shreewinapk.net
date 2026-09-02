@@ -44,8 +44,8 @@ export function ScreenshotGallery() {
   return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}</div>;
 }
 
-export function FAQAccordion({ items }: { items: readonly (readonly [string, string])[] }) {
-  return <div className="faq-list">{items.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>;
+export function FAQAccordion({ items, openFirst = true }: { items: readonly (readonly [string, string])[]; openFirst?: boolean }) {
+  return <div className="faq-list">{items.map(([question, answer], index) => <details key={question} open={openFirst && index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>;
 }
 
 export function ArticleCard({ title, copy, href, number }: { title: string; copy: string; href: string; number: number }) {

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { guidePages } from '../guide-content';
+import { allFaqs, faqGroups } from '../faq-content';
 import { siteConfig } from '../site-config';
-import { CTAButton, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
+import { CTAButton, FAQAccordion, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
 import { PageShell } from './SiteChrome';
 
 export function buildGuideMetadata(slug: string): Metadata {
@@ -41,13 +42,14 @@ export function GuidePage({ slug }: { slug: string }) {
     author: { '@type': 'Organization', name: `${siteConfig.siteName} Editorial Team`, url: `${siteConfig.domain}/about/` },
     publisher: { '@type': 'Organization', name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}` } },
   };
-  const faqSchema = slug === 'shree-win-faq' ? {
+  const isFaqPage = slug === 'shree-win-faq';
+  const faqSchema = isFaqPage ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: page.sections.map(section => ({
+    mainEntity: allFaqs.map(([question, answer]) => ({
       '@type': 'Question',
-      name: section.heading,
-      acceptedAnswer: { '@type': 'Answer', text: section.paragraphs.join(' ') },
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
     })),
   } : null;
 
@@ -68,8 +70,12 @@ export function GuidePage({ slug }: { slug: string }) {
     </div></section>
 
     <section className="guide-body" id="guide-content"><div className="container guide-body-grid">
-      <article className="guide-main">
-        {page.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}>
+      <article className={`guide-main ${isFaqPage ? 'faq-guide-content' : ''}`}>
+        {isFaqPage ? faqGroups.map((group, index) => <section id={`faq-group-${index + 1}`} key={group.title}>
+          <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
+          <h2>{group.title}</h2>
+          <FAQAccordion items={group.items} openFirst={false} />
+        </section>) : page.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}>
           <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
           <h2>{section.heading}</h2>
           {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -77,7 +83,7 @@ export function GuidePage({ slug }: { slug: string }) {
         </section>)}
       </article>
       <aside className="guide-sidebar">
-        <div className="side-card"><span>On this page</span>{page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}</div>
+        <div className="side-card"><span>On this page</span>{isFaqPage ? faqGroups.map((group, index) => <a key={group.title} href={`#faq-group-${index + 1}`}>{String(index + 1).padStart(2, '0')} {group.title}</a>) : page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}</div>
         <div className="side-card guide-directory"><span>Explore Shree Win</span><a href="/shree-win-apk/">APK &amp; app overview</a><a href="/shree-win-games/">Games directory</a><a href="/shree-win-deposit/">Deposit help</a><a href="/shree-win-withdrawal/">Withdrawal methods</a><a href="/shree-win-gift-code/">Gift Code guide</a><a href="/shree-win-login/">Login help</a><a href="/shree-win-register/">Registration help</a></div>
         <div className="side-card guide-directory"><span>Account &amp; safety</span><a href="/shree-win-account-settings/">Account settings</a><a href="/shree-win-account-recovery/">Account recovery</a><a href="/shree-win-login-problems/">Login problems</a><a href="/shree-win-apk-safety/">APK safety</a><a href="/shree-win-phishing-warning/">Fake-link warning</a><a href="/shree-win-faq/">ShreeWin FAQ</a></div>
         <SafetyNotice title="Keep your account safe"><p>Never share your ShreeWin password, OTP, withdrawal password, UPI PIN, bank PIN or card details with this website or another person.</p></SafetyNotice>
