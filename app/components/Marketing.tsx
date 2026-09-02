@@ -58,7 +58,7 @@ export function InfoTable() {
 }
 
 export function ReferralEventTable() {
-  return <div className="table-wrap event-reward-table"><table><thead><tr><th>Leaderboard rank</th><th>Active-invite milestone</th><th>Listed reward</th></tr></thead><tbody>{siteConfig.grandReferralEvent.rewards.map(tier => <tr key={tier.rank}><td>{tier.rank}</td><td>{tier.milestone}</td><td>{tier.reward}</td></tr>)}</tbody></table></div>;
+  return <div className="table-wrap event-reward-table" role="region" aria-label="ShreeWin Grand Referral Event reward table" tabIndex={0}><table><caption>Grand Referral Event 2026 leaderboard milestones and listed rewards</caption><thead><tr><th scope="col">Leaderboard rank</th><th scope="col">Active-invite milestone</th><th scope="col">Listed reward</th></tr></thead><tbody>{siteConfig.grandReferralEvent.rewards.map(tier => <tr key={tier.rank}><th scope="row">{tier.rank}</th><td>{tier.milestone}</td><td>{tier.reward}</td></tr>)}</tbody></table></div>;
 }
 
 export function SafetyNotice({ title = 'APK Safety Tips', children }: { title?: string; children: React.ReactNode }) {

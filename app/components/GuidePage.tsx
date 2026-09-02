@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { guidePages } from '../guide-content';
 import { allFaqs, faqGroups } from '../faq-content';
@@ -9,19 +10,22 @@ import { PageShell } from './SiteChrome';
 export function buildGuideMetadata(slug: string): Metadata {
   const page = guidePages[slug];
   const canonical = `/${page.slug}/`;
+  const image = page.image ? `${siteConfig.domain}${page.image.src}` : undefined;
   return {
     title: page.title,
     description: page.description,
+    keywords: page.keywords,
     alternates: { canonical },
-    openGraph: { title: page.title, description: page.description, url: canonical, type: 'website', images: [] },
-    twitter: { card: 'summary', title: page.title, description: page.description, images: [] },
+    openGraph: { title: page.title, description: page.description, url: canonical, type: 'article', images: image ? [{ url: image, width: page.image!.width, height: page.image!.height, alt: page.image!.alt }] : [] },
+    twitter: { card: image ? 'summary_large_image' : 'summary', title: page.title, description: page.description, images: image ? [image] : [] },
   };
 }
 
 export function GuidePage({ slug }: { slug: string }) {
   const page = guidePages[slug];
   const canonical = `${siteConfig.domain}/${page.slug}/`;
-  const updatedLabel = new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' }).format(new Date(`${siteConfig.lastUpdated}T00:00:00+05:30`));
+  const lastUpdated = page.lastUpdated || siteConfig.lastUpdated;
+  const updatedLabel = new Intl.DateTimeFormat('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' }).format(new Date(`${lastUpdated}T00:00:00+05:30`));
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -37,16 +41,18 @@ export function GuidePage({ slug }: { slug: string }) {
     description: page.description,
     mainEntityOfPage: canonical,
     datePublished: siteConfig.publishedDate,
-    dateModified: siteConfig.lastUpdated,
+    dateModified: lastUpdated,
     inLanguage: 'en-IN',
     author: { '@type': 'Organization', name: `${siteConfig.siteName} Editorial Team`, url: `${siteConfig.domain}/about/` },
     publisher: { '@type': 'Organization', name: siteConfig.siteName, url: `${siteConfig.domain}/`, logo: { '@type': 'ImageObject', url: `${siteConfig.domain}${siteConfig.logo}` } },
+    ...(page.image ? { image: `${siteConfig.domain}${page.image.src}` } : {}),
   };
   const isFaqPage = slug === 'shree-win-faq';
-  const faqSchema = isFaqPage ? {
+  const visibleFaqs = isFaqPage ? allFaqs : page.faqs;
+  const faqSchema = visibleFaqs?.length ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: allFaqs.map(([question, answer]) => ({
+    mainEntity: visibleFaqs.map(([question, answer]) => ({
       '@type': 'Question',
       name: question,
       acceptedAnswer: { '@type': 'Answer', text: answer },
@@ -71,6 +77,7 @@ export function GuidePage({ slug }: { slug: string }) {
 
     <section className="guide-body" id="guide-content"><div className="container guide-body-grid">
       <article className={`guide-main ${isFaqPage ? 'faq-guide-content' : ''}`}>
+        {page.image && <figure className="guide-feature-image"><Image src={page.image.src} width={page.image.width} height={page.image.height} alt={page.image.alt} sizes="(max-width: 900px) 100vw, 760px" priority /><figcaption>{page.image.caption}</figcaption></figure>}
         {isFaqPage ? faqGroups.map((group, index) => <section id={`faq-group-${index + 1}`} key={group.title}>
           <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
           <h2>{group.title}</h2>
@@ -82,9 +89,14 @@ export function GuidePage({ slug }: { slug: string }) {
           {slug === 'shree-win-grand-referral-event' && index === 0 && <ReferralEventTable />}
           {section.bullets && <ul>{section.bullets.map(item => <li key={item}>{item}</li>)}</ul>}
         </section>)}
+        {!isFaqPage && page.faqs && <section id="frequently-asked-questions" className="faq-guide-content">
+          <span className="section-number">{String(page.sections.length + 1).padStart(2, '0')}</span>
+          <h2>ShreeWin Grand Referral Event FAQs</h2>
+          <FAQAccordion items={page.faqs} openFirst={false} />
+        </section>}
       </article>
       <aside className="guide-sidebar">
-        <div className="side-card"><span>On this page</span>{isFaqPage ? faqGroups.map((group, index) => <a key={group.title} href={`#faq-group-${index + 1}`}>{String(index + 1).padStart(2, '0')} {group.title}</a>) : page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}</div>
+        <div className="side-card"><span>On this page</span>{isFaqPage ? faqGroups.map((group, index) => <a key={group.title} href={`#faq-group-${index + 1}`}>{String(index + 1).padStart(2, '0')} {group.title}</a>) : <>{page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}{page.faqs && <a href="#frequently-asked-questions">{String(page.sections.length + 1).padStart(2, '0')} Event FAQs</a>}</>}</div>
         <div className="side-card guide-directory"><span>Explore Shree Win</span><a href="/shree-win-apk/">APK &amp; app overview</a><a href="/shree-win-games/">Games directory</a><a href="/shree-win-deposit/">Deposit help</a><a href="/shree-win-withdrawal/">Withdrawal methods</a><a href="/shree-win-gift-code/">Gift Code guide</a><a href="/shree-win-login/">Login help</a><a href="/shree-win-register/">Registration help</a></div>
         <div className="side-card guide-directory"><span>Account &amp; safety</span><a href="/shree-win-account-settings/">Account settings</a><a href="/shree-win-account-recovery/">Account recovery</a><a href="/shree-win-login-problems/">Login problems</a><a href="/shree-win-apk-safety/">APK safety</a><a href="/shree-win-phishing-warning/">Fake-link warning</a><a href="/shree-win-faq/">ShreeWin FAQ</a></div>
         <SafetyNotice title="Keep your account safe"><p>Never share your ShreeWin password, OTP, withdrawal password, UPI PIN, bank PIN or card details with this website or another person.</p></SafetyNotice>
