@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://shreewinapk.net
+Sitemap: https://shreewinapk.net/sitemap.xml
