@@ -24,7 +24,7 @@ export const siteConfig = {
   categories: ['Lobby', 'Lottery', 'Popular', 'Mini Game', 'Slots', 'Casino'],
   withdrawals: {
     upiMinimumInr: 100,
-    bankMinimumInr: 100,
+    bankMinimumInr: 110,
     usdtMinimumInr: 1000,
   },
   agencyLevels: 6,

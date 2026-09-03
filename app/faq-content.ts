@@ -281,7 +281,7 @@ export const faqGroups = [
       ],
       [
         "What is the minimum withdrawal amount?",
-        "The current minimum withdrawal is ₹100 through UPI or bank transfer and ₹1,000 through USDT. Check the selected method and receiving details in Wallet before submitting because each payment route has its own form."
+        "The current minimum withdrawal is ₹100 through UPI, ₹110 through bank transfer and ₹1,000 through USDT. Check the selected method and receiving details in Wallet before submitting because each payment route has its own form."
       ],
       [
         "How long does a withdrawal take?",
