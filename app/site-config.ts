@@ -15,7 +15,7 @@ export const siteConfig = {
   apkVersion: null as string | null,
   apkSize: null as string | null,
   publishedDate: '2026-08-27',
-  lastUpdated: '2026-09-03',
+  lastUpdated: '2026-09-04',
   dailyGiftCode: {
     value: null as string | null,
     checkedOn: '2026-09-03',

@@ -101,9 +101,9 @@ export function GuidePage({ slug }: { slug: string }) {
           <FAQAccordion items={page.faqs} openFirst={false} />
         </section>}
         {page.images?.length ? <section className="guide-screenshot-section" id="current-app-screens">
-          <span className="section-number">APP SCREENS</span>
-          <h2>See these options inside ShreeWin</h2>
-          <p>These screenshots show where the options appear. Tap an image to open the complete screen.</p>
+          <span className="section-number">APP WALKTHROUGH</span>
+          <h2>Explore these ShreeWin sections</h2>
+          <p>Tap any preview image to view the complete ShreeWin page and its available options.</p>
           <div className="guide-screenshot-grid">{page.images.map(image => <figure key={image.src}><a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${image.title} screenshot`}><Image src={image.src} width={image.width} height={image.height} alt={image.alt} loading="lazy" sizes="(max-width: 680px) 100vw, 50vw" /></a><figcaption><strong>{image.title}</strong>{image.caption}</figcaption></figure>)}</div>
         </section> : null}
       </article>

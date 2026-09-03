@@ -16,12 +16,12 @@ export const shreeWinScreens = {
   firstDepositBonus: {
     src: '/shreewin-first-deposit-bonus.webp', title: 'First-deposit bonus tiers', width: 720, height: 1400,
     alt: 'ShreeWin first-deposit bonus screen with four deposit tiers',
-    caption: 'The offer screen lists one-time tiers of ₹300 + ₹48, ₹500 + ₹108, ₹1,000 + ₹188 and ₹5,000 + ₹488.',
+    caption: 'First-deposit bonus tiers are ₹300 + ₹48, ₹500 + ₹108, ₹1,000 + ₹188 and ₹5,000 + ₹488.',
   },
   homepageGames: {
     src: '/shreewin-homepage-lottery-games.webp', title: 'Game homepage', width: 720, height: 1355,
     alt: 'ShreeWin homepage showing Lobby, Lottery and game cards',
-    caption: 'The current homepage places Lobby, Lottery, Popular, Mini Game and Slots in the top category row.',
+    caption: 'Use Lobby, Lottery, Popular, Mini Game and Slots from the main category row.',
   },
   agentRechargeBonus: {
     src: '/shreewin-agent-referral-bonus.webp', title: 'Agent recharge bonus', width: 720, height: 1377,
@@ -31,11 +31,11 @@ export const shreeWinScreens = {
   referralMilestones: {
     src: '/shreewin-referral-milestone-bonus.webp', title: 'Referral milestones', width: 720, height: 1413,
     alt: 'ShreeWin referral milestone table for invited subordinates',
-    caption: 'The referral screen lists invite-count, minimum-deposit and bonus milestones from 1 to 5,000 invited subordinates.',
+    caption: 'Referral milestones combine invite count, minimum deposit and bonus levels from 1 to 5,000 invited subordinates.',
   },
   activityAward: {
     src: '/shreewin-activity-award.webp', title: 'Activity Award tasks', width: 720, height: 1415,
-    alt: 'ShreeWin Activity Award screen showing weekly tasks',
+    alt: 'ShreeWin Activity Award page with weekly tasks',
     caption: 'Activity Award separates weekly and daily tasks. Each task shows its target, completion status and listed reward.',
   },
   activityCenter: {
@@ -46,7 +46,7 @@ export const shreeWinScreens = {
   firstGift: {
     src: '/shreewin-first-gift.webp', title: 'First Gift details', width: 720, height: 1367,
     alt: 'ShreeWin First Gift activity details screen',
-    caption: 'The First Gift screen dated 24 August 2026 shows a new-user first-deposit compensation offer capped at ₹200.',
+    caption: 'First Gift includes a new-user first-deposit compensation offer capped at ₹200, dated 24 August 2026.',
   },
   agencyDashboard: {
     src: '/shreewin-agency-dashboard.webp', title: 'Agency dashboard', width: 720, height: 1383,
@@ -76,12 +76,12 @@ export const shreeWinScreens = {
   depositScreen: {
     src: '/shreewin-deposit-screen.webp', title: 'Deposit screen', width: 720, height: 1415,
     alt: 'ShreeWin Deposit screen with payment methods and amount choices',
-    caption: 'The Deposit screen shows UPI-QR, Innate UPI-QR, Paytm and ARPay, along with preset and custom amount options.',
+    caption: 'Deposit provides UPI-QR, Innate UPI-QR, Paytm and ARPay, with preset and custom amount options.',
   },
   withdrawalMethods: {
     src: '/shreewin-withdrawal-methods.webp', title: 'Withdrawal methods', width: 720, height: 1444,
     alt: 'ShreeWin Withdrawal screen with UPI, bank card and USDT',
-    caption: 'The Withdrawal screen provides UPI, bank-card and USDT tabs. Add the receiving account before entering an amount.',
+    caption: 'Choose UPI, bank card or USDT, then add the receiving account before entering an amount.',
   },
   usdtWithdrawalRules: {
     src: '/shreewin-usdt-withdrawal-rules.webp', title: 'USDT withdrawal rules', width: 720, height: 1404,

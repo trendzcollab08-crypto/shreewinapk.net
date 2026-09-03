@@ -7,11 +7,11 @@ export const faqGroups = [
     "items": [
       [
         "What is Shree Win?",
-        "Shree Win is a mobile-focused gaming platform with account, game, Wallet, Activity and Promotion tools. The current homepage shows Lobby, Lottery, Popular, Mini Game and Slots, while other app screens also show Casino content. Visible game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
+        "Shree Win is a mobile-focused gaming platform with account, game, Wallet, Activity and Promotion tools. Its main categories include Lobby, Lottery, Popular, Mini Game, Slots and Casino. Available game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
       ],
       [
         "What is ShreeWinAPK.net?",
-        "ShreeWinAPK.net is an independent Shree Win information website. It provides Login and Register access, beginner guides, game explanations, wallet help and account-safety information. This website does not control player accounts or process deposits and withdrawals."
+        "ShreeWinAPK.net provides Shree Win Login and Register access, app-download steps, game explanations, Wallet help, promotion details, agent information and account-safety guides in one place."
       ],
       [
         "Can I register for Shree Win through ShreeWinAPK.net?",
@@ -22,8 +22,8 @@ export const faqGroups = [
         "Yes. Select Login on ShreeWinAPK.net to open the Shree Win member-login page. Enter the mobile number and password connected to your existing account. ShreeWinAPK.net does not receive or store your Shree Win password."
       ],
       [
-        "Is ShreeWinAPK.net the operator of Shree Win?",
-        "No. ShreeWinAPK.net is an independent information website, not the game operator. Account balances, game results, verification, payments and withdrawals are handled by the destination platform."
+        "What can I do on ShreeWinAPK.net?",
+        "You can open Shree Win Login or Register, follow the APK and account guides, learn the game categories, understand Wallet actions, check promotion details and find help for common account problems."
       ],
       [
         "Why should I use ShreeWinAPK.net?",
@@ -43,7 +43,7 @@ export const faqGroups = [
       ],
       [
         "Is Shree Win available in Hindi?",
-        "Open the language menu in Shree Win and choose Hindi when it is shown for your current app or web version. ShreeWinAPK.net uses simple English and Hinglish where it helps Indian users follow account and wallet steps."
+        "Open the Language menu in Shree Win and choose Hindi when the option is available. ShreeWinAPK.net also uses clear English and Hinglish to help Indian users follow account and Wallet steps."
       ]
     ]
   },
@@ -187,7 +187,7 @@ export const faqGroups = [
     "items": [
       [
         "Which games are available on Shree Win?",
-        "The current Shree Win homepage shows Lobby, Lottery, Popular, Mini Game and Slots. Other app screens also show Casino content. Visible game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
+        "Shree Win includes Lobby, Lottery, Popular, Mini Game, Slots and Casino categories. Available game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
       ],
       [
         "What is Wingo?",
@@ -248,11 +248,11 @@ export const faqGroups = [
       ],
       [
         "Which payment methods can I use?",
-        "Current Shree Win deposit information includes QR code, UPI, Paytm, Google Pay, PhonePe and USDT. Open the live Deposit or Recharge screen to see which options are available for your account and use only the payment details generated there."
+        "Shree Win supports QR code, UPI, Paytm, Google Pay, PhonePe and USDT deposits. Open Deposit or Recharge to choose an option available for your account and use only the payment details generated there."
       ],
       [
         "What is the minimum deposit?",
-        "The active deposit screen displays the current minimum and preset amounts. Check that figure before starting payment because promotional pages and old screenshots can become outdated."
+        "Open Deposit to check the minimum and preset amounts available for your selected payment method. Confirm the amount before starting the payment."
       ],
       [
         "Why was my deposit not credited?",
@@ -281,11 +281,11 @@ export const faqGroups = [
       ],
       [
         "What is the minimum withdrawal amount?",
-        "The current minimum withdrawal is ₹100 through UPI, ₹110 through bank transfer and ₹1,000 through USDT. Check the selected method and receiving details in Wallet before submitting because each payment route has its own form."
+        "The minimum withdrawal is ₹100 through UPI, ₹110 through bank transfer and ₹1,000 through USDT. Check the selected method and receiving details in Wallet before submitting because each payment route has its own form."
       ],
       [
         "How long does a withdrawal take?",
-        "Current Shree Win information says UPI and bank requests are normally processed within 30 minutes, while USDT can be processed instantly in normal conditions. Verification, incorrect receiving details, network traffic or account checks can add extra time."
+        "UPI and bank requests are normally processed within 30 minutes, while USDT can be processed instantly in normal conditions. Verification, incorrect receiving details, network traffic or account checks can add extra time."
       ],
       [
         "Why is my withdrawal pending?",
@@ -371,7 +371,7 @@ export const faqGroups = [
       ],
       [
         "How do I contact Shree Win customer support?",
-        "Log in and use Customer Support in Shree Win Settings. Support is available 24/7 for account, wallet and transaction problems. ShreeWinAPK.net provides general guides but cannot change an account balance or transaction status."
+        "Log in and use Customer Support in Shree Win Settings. Support is available 24/7 for account, Wallet and transaction problems. Keep your user ID and transaction reference ready so the support team can check the issue."
       ],
       [
         "What information should I provide in a support ticket?",

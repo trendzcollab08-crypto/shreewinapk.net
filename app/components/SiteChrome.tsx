@@ -42,7 +42,7 @@ export function Footer() {
     </div>
     <div className="container footer-disclaimer">
       <strong>About ShreeWinAPK.net</strong>
-      <p>ShreeWinAPK.net provides ShreeWin guides and account access links. It does not run ShreeWin games, accounts or payments.</p>
+      <p>Use ShreeWinAPK.net for ShreeWin app, game, account, Wallet, promotion and agent guides. Login and Register buttons open the ShreeWin account page.</p>
     </div>
     <div className="container footer-bottom"><span>© 2026 ShreeWinAPK.net. All rights reserved.</span><span>Gaming may involve financial risk. Outcomes are not guaranteed.</span></div>
   </footer>;
