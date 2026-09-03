@@ -35,8 +35,8 @@ Git deployment for this project uses the generated static `main` branch.
 Add these public values in the Hostinger application settings if they need to differ from the defaults:
 
 - `NEXT_PUBLIC_SITE_URL=https://shreewinapk.net`
-- `NEXT_PUBLIC_LOGIN_URL=https://shreewin1.com`
-- `NEXT_PUBLIC_REGISTER_URL=https://shreewin1.com`
+- `NEXT_PUBLIC_LOGIN_URL=https://www.shreewin.org/#/register?invitationCode=53541148121`
+- `NEXT_PUBLIC_REGISTER_URL=https://www.shreewin.org/#/register?invitationCode=53541148121`
 
 Do not upload `.env` files or commit secrets. The repository contains only `.env.example`, which documents public configuration and contains no credentials.
 

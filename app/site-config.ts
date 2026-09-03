@@ -1,8 +1,8 @@
 import { currentPlatformScreens } from './media-config';
 
 const siteDomain = (process.env.NEXT_PUBLIC_SITE_URL || 'https://shreewinapk.net').replace(/\/+$/, '');
-const loginUrl = process.env.NEXT_PUBLIC_LOGIN_URL || 'https://shreewin1.com';
-const registerUrl = process.env.NEXT_PUBLIC_REGISTER_URL || 'https://shreewin1.com';
+const loginUrl = process.env.NEXT_PUBLIC_LOGIN_URL || 'https://www.shreewin.org/#/register?invitationCode=53541148121';
+const registerUrl = process.env.NEXT_PUBLIC_REGISTER_URL || 'https://www.shreewin.org/#/register?invitationCode=53541148121';
 
 export const siteConfig = {
   brand: 'ShreeWin',
