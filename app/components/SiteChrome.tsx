@@ -8,7 +8,7 @@ export function Header() {
   return <header className="site-header">
     <div className="header-inner">
       <Link className="brand-logo" href="/" aria-label="ShreeWinAPK.net home">
-        <Image src={siteConfig.logo} width="270" height="90" alt="ShreeWin" priority sizes="158px" />
+        <Image src={siteConfig.logo} width="270" height="90" alt="ShreeWin" preload sizes="158px" />
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {siteConfig.navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}

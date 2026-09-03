@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { guidePages } from '../guide-content';
 import { allFaqs, faqGroups } from '../faq-content';
 import { siteConfig } from '../site-config';
-import { CTAButton, FAQAccordion, ReferralEventTable, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
+import { CTAButton, DailyGiftCodeStatus, FAQAccordion, ReferralEventTable, ResponsibleGamingNotice, SafetyNotice } from './Marketing';
 import { PageShell } from './SiteChrome';
 
 export function buildGuideMetadata(slug: string): Metadata {
@@ -82,7 +82,8 @@ export function GuidePage({ slug }: { slug: string }) {
 
     <section className="guide-body" id="guide-content"><div className="container guide-body-grid">
       <article className={`guide-main ${isFaqPage ? 'faq-guide-content' : ''}`}>
-        {page.image && <figure className="guide-feature-image"><Image src={page.image.src} width={page.image.width} height={page.image.height} alt={page.image.alt} sizes="(max-width: 900px) 100vw, 760px" priority /><figcaption>{page.image.caption}</figcaption></figure>}
+        {page.image && <figure className="guide-feature-image"><Image src={page.image.src} width={page.image.width} height={page.image.height} alt={page.image.alt} sizes="(max-width: 900px) 100vw, 760px" loading="lazy" /><figcaption><strong>{page.image.title}</strong>{page.image.caption}</figcaption></figure>}
+        {slug === 'shree-win-gift-code' && <DailyGiftCodeStatus />}
         {isFaqPage ? faqGroups.map((group, index) => <section id={`faq-group-${index + 1}`} key={group.title}>
           <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
           <h2>{group.title}</h2>
@@ -99,6 +100,12 @@ export function GuidePage({ slug }: { slug: string }) {
           <h2>ShreeWin Grand Referral Event FAQs</h2>
           <FAQAccordion items={page.faqs} openFirst={false} />
         </section>}
+        {page.images?.length ? <section className="guide-screenshot-section" id="current-app-screens">
+          <span className="section-number">APP SCREENS</span>
+          <h2>See these options inside ShreeWin</h2>
+          <p>These screenshots show where the options appear. Tap an image to open the complete screen.</p>
+          <div className="guide-screenshot-grid">{page.images.map(image => <figure key={image.src}><a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${image.title} screenshot`}><Image src={image.src} width={image.width} height={image.height} alt={image.alt} loading="lazy" sizes="(max-width: 680px) 100vw, 50vw" /></a><figcaption><strong>{image.title}</strong>{image.caption}</figcaption></figure>)}</div>
+        </section> : null}
       </article>
       <aside className="guide-sidebar">
         <div className="side-card"><span>On this page</span>{isFaqPage ? faqGroups.map((group, index) => <a key={group.title} href={`#faq-group-${index + 1}`}>{String(index + 1).padStart(2, '0')} {group.title}</a>) : <>{page.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, '0')} {section.heading}</a>)}{page.faqs && <a href="#frequently-asked-questions">{String(page.sections.length + 1).padStart(2, '0')} Event FAQs</a>}</>}</div>

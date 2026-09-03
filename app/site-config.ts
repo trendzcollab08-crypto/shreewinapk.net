@@ -1,3 +1,5 @@
+import { currentPlatformScreens } from './media-config';
+
 const siteDomain = (process.env.NEXT_PUBLIC_SITE_URL || 'https://shreewinapk.net').replace(/\/+$/, '');
 const loginUrl = process.env.NEXT_PUBLIC_LOGIN_URL || 'https://shreewin1.com';
 const registerUrl = process.env.NEXT_PUBLIC_REGISTER_URL || 'https://shreewin1.com';
@@ -13,9 +15,13 @@ export const siteConfig = {
   apkVersion: null as string | null,
   apkSize: null as string | null,
   publishedDate: '2026-08-27',
-  lastUpdated: '2026-09-02',
+  lastUpdated: '2026-09-03',
+  dailyGiftCode: {
+    value: null as string | null,
+    checkedOn: '2026-09-03',
+  },
   games: ['WinGo', 'K3', '5D', 'Aviator', 'TRX WinGo', 'MotoRace'],
-  categories: ['Lobby', 'Lottery', 'Popular', 'Mini Game', 'Casino'],
+  categories: ['Lobby', 'Lottery', 'Popular', 'Mini Game', 'Slots', 'Casino'],
   withdrawals: {
     upiMinimumInr: 100,
     bankMinimumInr: 100,
@@ -50,6 +56,7 @@ export const siteConfig = {
     { src: '/preview-lottery.webp', title: 'Lottery', alt: 'Shree Win lottery section showing available game cards', width: 720, height: 1760 },
     { src: '/preview-password-reset.webp', title: 'Password reset', alt: 'Shree Win password reset screen with verification step', width: 720, height: 1487 },
     { src: '/preview-event-rewards.webp', title: 'Activity prompt', alt: 'Shree Win activity prompt displayed over the mobile lobby', width: 720, height: 1732 },
+    ...currentPlatformScreens,
   ],
   navigation: [
     { label: 'Home', href: '/' },

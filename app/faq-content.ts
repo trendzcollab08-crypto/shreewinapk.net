@@ -7,7 +7,7 @@ export const faqGroups = [
     "items": [
       [
         "What is Shree Win?",
-        "Shree Win is a mobile-focused gaming platform with account, game, Wallet, Activity, Promotion and Account tools. Its interface includes Lobby, Lottery, Popular, Mini Game and Casino categories. Known game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace. Open the live lobby to see the current selection."
+        "Shree Win is a mobile-focused gaming platform with account, game, Wallet, Activity and Promotion tools. The current homepage shows Lobby, Lottery, Popular, Mini Game and Slots, while other app screens also show Casino content. Visible game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
       ],
       [
         "What is ShreeWinAPK.net?",
@@ -187,7 +187,7 @@ export const faqGroups = [
     "items": [
       [
         "Which games are available on Shree Win?",
-        "The Shree Win interface includes Lobby, Lottery, Popular, Mini Game and Casino categories. Known game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace. Open the live lobby to see the games currently available to your account."
+        "The current Shree Win homepage shows Lobby, Lottery, Popular, Mini Game and Slots. Other app screens also show Casino content. Visible game entries include WinGo, K3, 5D, Aviator, TRX WinGo and MotoRace."
       ],
       [
         "What is Wingo?",

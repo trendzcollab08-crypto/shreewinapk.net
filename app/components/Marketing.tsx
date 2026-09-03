@@ -14,12 +14,12 @@ export function Hero() {
       <div className="hero-copy">
         <p className="eyebrow"><span/> Shree Win Game Information</p>
         <h1>ShreeWin Game – Login, Register, APK, Games &amp; Withdrawal Guide</h1>
-        <p className="hero-lead">Shree Win brings interactive mobile games, account access, Android APK, wallet tools, promotions, Gift Codes, TRX WinGo, MotoRace and six-level Agency features into one interface. Our guides explain game rules, timing, available choices, result checks and responsible decision-making, along with registration, login, deposits, withdrawals and account safety.</p>
+        <p className="hero-lead">Shree Win brings interactive mobile games, account access, Android APK, wallet tools, promotions, Gift Codes, WinGo, K3, 5D, Aviator, TRX WinGo, MotoRace and six-level Agency features into one interface. Our guides explain game rules, timing, available choices, result checks, registration, login, deposits, withdrawals and account safety.</p>
         <div className="hero-actions"><CTAButton kind="register">Register <span>↗</span></CTAButton><CTAButton kind="login">Login <span>↗</span></CTAButton><a className="button button-text" href="#shree-win-apk">Explore Shree Win APK <span>↓</span></a></div>
         <ul className="hero-trust"><li><b>Step-by-step help</b><span>Short and clear instructions</span></li><li><b>Indian payment guide</b><span>UPI, bank and USDT information</span></li><li><b>Safe account access</b><span>We never collect your login details</span></li></ul>
       </div>
       <div className="app-visual" aria-label="Shree Win app interface preview">
-        <div className="phone-frame"><div className="phone-notch"/><Image src="/preview-home.webp" width="720" height="1732" alt="Shree Win game homepage showing lottery and gaming categories" priority sizes="(max-width: 680px) 245px, 310px" /></div>
+        <div className="phone-frame"><div className="phone-notch"/><Image src="/preview-home.webp" width="720" height="1732" alt="Shree Win game homepage showing lottery and gaming categories" preload sizes="(max-width: 680px) 245px, 310px" /></div>
         <div className="visual-chip chip-one"><span>⑧</span><b>WinGo • K3 • 5D</b><small>Game information</small></div>
         <div className="visual-chip chip-two"><span>₹</span><b>UPI • Bank • USDT</b><small>Withdrawal guide</small></div>
       </div>
@@ -41,7 +41,15 @@ export function GameCard({ label, title, copy, href, icon }: { label: string; ti
 }
 
 export function ScreenshotGallery() {
-  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><div><Image src={image.src} width={image.width} height={image.height} alt={image.alt} sizes="(max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></div><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.title}</figcaption></figure>)}</div>;
+  return <div className="screenshot-grid">{siteConfig.screenshots.map((image, index) => <figure key={image.src} className={index === 0 ? 'featured-shot' : ''}><a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${image.title} screenshot`}><Image src={image.src} width={image.width} height={image.height} alt={image.alt} loading="lazy" sizes="(max-width: 390px) 100vw, (max-width: 680px) 50vw, (max-width: 1080px) 33vw, 25vw" /></a><figcaption><span>{String(index + 1).padStart(2, '0')}</span><b>{image.title}</b>{'caption' in image && <small>{image.caption}</small>}</figcaption></figure>)}</div>;
+}
+
+export function DailyGiftCodeStatus() {
+  return <aside className="daily-code-card" aria-labelledby="daily-code-title">
+    <div><span>Gift Code update</span><h3 id="daily-code-title">Today&apos;s ShreeWin Gift Code</h3><p>We check the latest code and publish it here. Open Account → Gifts, enter the active code and tap Receive.</p></div>
+    <div className="daily-code-value">{siteConfig.dailyGiftCode.value ? <><strong>{siteConfig.dailyGiftCode.value}</strong><small>Checked {siteConfig.dailyGiftCode.checkedOn}</small></> : <><strong>No active code listed</strong><small>Checked {siteConfig.dailyGiftCode.checkedOn}</small></>}</div>
+    <a href="/shree-win-gift-code/">Open Gift Code guide →</a>
+  </aside>;
 }
 
 export function FAQAccordion({ items, openFirst = true }: { items: readonly (readonly [string, string])[]; openFirst?: boolean }) {
@@ -53,7 +61,7 @@ export function ArticleCard({ title, copy, href, number }: { title: string; copy
 }
 
 export function InfoTable() {
-  const rows = ['Mobile Interface','Phone & Email Account Access','Password Reset','Lottery Category','TRX WinGo','MotoRace','Mini Games','Casino Category','Promotions','Activity Section','UPI & Bank Withdrawal','USDT Withdrawal','Agency / Invitation System','Account Section'];
+  const rows = ['Mobile Interface','Phone & Email Account Access','Password Reset','Lottery Category','WinGo, K3 & 5D','TRX WinGo','MotoRace','Mini Games','Slots Category','Casino Content','Promotions','Activity Section','UPI & Bank Withdrawal','USDT Withdrawal','Agency / Invitation System','Account Section'];
   return <div className="table-wrap"><table><thead><tr><th>Feature</th><th>Shree Win</th></tr></thead><tbody>{rows.map(row => <tr key={row}><td>{row}</td><td><span aria-label="Available in Shree Win">✓</span> Available</td></tr>)}</tbody></table></div>;
 }
 
