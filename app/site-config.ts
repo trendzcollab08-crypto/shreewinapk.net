@@ -63,7 +63,7 @@ export const siteConfig = {
     { label: 'ShreeWin APK', href: '/shree-win-apk/' },
     { label: 'Download', href: '/shree-win-download/' },
     { label: 'Games', href: '/shree-win-games/' },
-    { label: 'Withdraw', href: '/shree-win-withdrawal/' },
+    { label: 'Wallet', href: '/shree-win-wallet/' },
     { label: 'Agent Guide', href: '/shree-win-agent/' },
     { label: 'TRX WinGo', href: '/trx-wingo/' },
     { label: 'MotoRace', href: '/motorace/' },

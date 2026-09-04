@@ -1,5 +1,5 @@
 import { buildStaticRedirectMetadata, StaticRedirect } from '../components/StaticRedirect';
 
-export const metadata = buildStaticRedirectMetadata('/trx-wingo/', 'TRX WinGo');
+export const metadata = buildStaticRedirectMetadata('/shree-win-wingo/', 'ShreeWin WinGo');
 
-export default function LegacyRedirect() { return <StaticRedirect destination="/trx-wingo/" label="TRX WinGo" />; }
+export default function LegacyRedirect() { return <StaticRedirect destination="/shree-win-wingo/" label="ShreeWin WinGo" />; }

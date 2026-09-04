@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:static": "STATIC_EXPORT=true next build",
+    "check:static": "node scripts/check-static-seo.mjs",
     "start": "next start",
     "lint": "eslint . --ignore-pattern .next --ignore-pattern dist --ignore-pattern .vinext --ignore-pattern .wrangler",
     "typecheck": "tsc --noEmit"
